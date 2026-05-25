@@ -31,7 +31,7 @@ const About = () => {
 
       <div className="w-1/2 flex justify-center">
         <Image
-            className="object-cover w-72 rounded-lg shadow-lg"
+            className="object-cover rounded-lg shadow-lg"
           src="/images/About.jpeg"
           alt="About ABM Mejbha"
           width={300}
