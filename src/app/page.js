@@ -8,7 +8,7 @@ import Services from '@/components/Services'
 
 export default function Home() {
   return (
-    <main className="bg-slate-400 min-h-screen">
+    <main className="bg-slate-400 min-h-screen pt-16">
 
     <Navbar/>
     <Hero/>
