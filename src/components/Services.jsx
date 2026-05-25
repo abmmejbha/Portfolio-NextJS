@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Hero = () => {
+const Services = () => {
   return (
     <>
       <div>
-        Home
+        Services
+    
       </div>
     </>
   )
 }
 
-export default Hero
+export default Services

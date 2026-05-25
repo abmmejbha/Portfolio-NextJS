@@ -1,0 +1,20 @@
+{
+  "React Functional Component Export (rfce)": {
+    "prefix": "rfce",
+    "scope": "javascriptreact,typescriptreact",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "  return (",
+      "    <>",
+      "      $2",
+      "    </>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:ComponentName}"
+    ],
+    "description": "Create a React functional component and export it (ES7 rfce)"
+  }
+}

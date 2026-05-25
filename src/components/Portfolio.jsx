@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Hero = () => {
+const Portfolio = () => {
   return (
     <>
       <div>
-        Home
+        Portfolio
       </div>
     </>
   )
 }
 
-export default Hero
+export default Portfolio
