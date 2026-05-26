@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Portfolio() {
   return (
-    <div>
+    <div id="portfolio" className="px-8 py-20 ">
       <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
         My Projects
       </h2>

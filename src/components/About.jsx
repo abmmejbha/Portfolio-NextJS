@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex justify-between items-center px-8 py-20 min-h-screen">
+    <div id="about" className="flex justify-between items-center px-8 py-20 min-h-screen">
       <div className="flex w-1/2 gap-4 flex-col">
         <h1 className="text-3xl font-bold text-slate-900">About me</h1>
         <h2 className="text-xl font-semibold text-blue-600">Frontend Developer</h2>

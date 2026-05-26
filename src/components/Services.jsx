@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <div className="px-8 py-20 ">
+    <div id="services" className="px-8 py-20 ">
       <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
         My Services
       </h2>
