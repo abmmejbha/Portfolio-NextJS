@@ -22,11 +22,12 @@ export default function Navbar() {
           >
             About
           </Link>
+          
           <Link
             className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
-            href="#contact"
+            href="#services"
           >
-            Contact
+            Services
           </Link>
           <Link
             className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
@@ -36,9 +37,9 @@ export default function Navbar() {
           </Link>
           <Link
             className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
-            href="#services"
+            href="#contact"
           >
-            Services
+            Contact
           </Link>
         </div>
       </div>
