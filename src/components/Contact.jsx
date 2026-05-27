@@ -6,7 +6,7 @@ const Contact = () => {
       <h1 className="pt-20 pb-12 font-bold text-3xl text-center text-slate-900 ">
         Contact <span className="text-blue-900">Me!</span>
       </h1>
-      <div className="grid gap-4 grid-cols-2 px-8 py-4">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 px-8 py-4">
         <input
           className="bg-white text-slate-900 w-full px-4 py-4 border border-slate-300 rounded-2xl outline-none focus:border-blue-500 transition-colors"
           type="text"
