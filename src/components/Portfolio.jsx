@@ -8,7 +8,7 @@ export default function Portfolio() {
         My Projects
       </h2>
 
-      <div className="px-8 py-20 gap-8 min-h-screen justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="px-2 py-20 gap-8 min-h-screen justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {/* Currency Converter */}
         <div className="flex flex-col gap-2 bg-slate-300 p-6  shadow-lg rounded-2xl hover:bg-white transition-all ">
           <Image src="" alt="" />
