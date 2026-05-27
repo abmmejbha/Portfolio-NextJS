@@ -5,6 +5,21 @@
   --foreground: #171717;
 }
 
+@keyframes float{
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
 
 html{
   scroll-behavior:smooth;
