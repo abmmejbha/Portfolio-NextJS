@@ -2,9 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white border-b border-slate-200">
@@ -50,24 +52,41 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger menu */}
-        <div
+        <button
+          type="button"
+          className="p-2 rounded-lg cursor-pointer text-xl"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
+        <button
           type="button"
           className="block md:hidden cursor-pointer text-2xl text-slate-700 p-2 active:bg-slate-100 rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           // onTouchEnd={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
         >
           ☰
-        </div>
+        </button>
       </div>
 
       {/* Mobile Dropdown menu */}
       {isOpen && (
         <div className="z-60 md:hidden flex flex-col gap-4 p-4 bg-white shadow-lg">
-          <Link onClick={() => setIsOpen(false)} href="/">Home</Link>
-          <Link onClick={() => setIsOpen(false)} href="#about">About</Link>
-          <Link onClick={() => setIsOpen(false)} href="#services">Services</Link>
-          <Link onClick={() => setIsOpen(false)} href="#portfolio">Portfolio</Link>
-          <Link onClick={() => setIsOpen(false)} href="#contact">Contact</Link>
+          <Link onClick={() => setIsOpen(false)} href="/">
+            Home
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="#about">
+            About
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="#services">
+            Services
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="#portfolio">
+            Portfolio
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href="#contact">
+            Contact
+          </Link>
         </div>
       )}
     </nav>
