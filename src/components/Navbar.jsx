@@ -9,42 +9,42 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white border-b border-slate-200">
+    <nav className="fixed top-0 w-full z-50 bg-[#c8e0f0] dark:bg-[#364958] border-b border-slate-200">
       {/* main navigation bar container */}
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 bg-white border-b border-slate-200 ">
-        <Link className="text-xl font-bold text-blue-600" href="/">
+        <Link className="text-xl font-bold text-[#22577a] dark:text-[#87bba2]" href="/">
           ABM Mejbha
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4">
           <Link
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-[#22577a] dark:text-[#05bd95] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-[#22577a] dark:text-[#05bd95] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
             href="#about"
           >
             About
           </Link>
 
           <Link
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-[#22577a] dark:text-[#05bd95] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
             href="#services"
           >
             Services
           </Link>
           <Link
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-[#22577a] dark:text-[#05bd95] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
             href="#portfolio"
           >
             Portfolio
           </Link>
           <Link
-            className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-[#22577a] dark:text-[#05bd95] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
             href="#contact"
           >
             Contact
