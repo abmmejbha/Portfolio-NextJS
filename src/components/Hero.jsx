@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <>
+    <div className="bg-linear-to-br from-slate-200 to-blue-300 min-h-screen">
       <div className="flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
         {/* image div */}
         <div className="w-full md:w-1/2 flex justify-center">
           {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounde-2xl shadow-lg"> */}
             <Image
-              className="object-cover rounded-lg shadow-lg"
+              className="object-cover rounded-lg shadow-2xl"
               src="/images/me.PNG"
               alt="ABM Mejbha"
               width={300}
@@ -36,7 +36,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
