@@ -7,10 +7,13 @@ export default function Services() {
         My Services
       </h2>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="flex flex-col gap-3 p-6 border border-slate-300 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-white">
           <span className="text-4xl mb-2 text-center">🌐</span>
-          <h3 className="text-xl font-semibold text-slate-900"> Web Development</h3>
+          <h3 className="text-xl font-semibold text-slate-900">
+            {" "}
+            Web Development
+          </h3>
           <p className="text-slate-500 text-sm leading-relaxed">
             Building responsive and user-friendly websites using modern
             technologies like React, Next.js, and Node.js.
@@ -18,7 +21,10 @@ export default function Services() {
         </div>
         <div className="flex flex-col gap-3 p-6 border border-slate-300 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-white">
           <span className="text-4xl mb-2 text-center">🎨</span>
-          <h3 className="text-xl font-semibold text-slate-900"> UI/UX Responsive Design</h3>
+          <h3 className="text-xl font-semibold text-slate-900">
+            {" "}
+            UI/UX Responsive Design
+          </h3>
           <p className="text-slate-500 text-sm leading-relaxed">
             Designing visually appealing and intuitive user interfaces that
             enhance user experience and engagement.
@@ -26,7 +32,10 @@ export default function Services() {
         </div>
         <div className="flex flex-col gap-3 p-6 border border-slate-300 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-white">
           <span className="text-4xl mb-2 text-center">⚡</span>
-          <h3 className="text-xl font-semibold text-slate-900"> Performance Optimization</h3>
+          <h3 className="text-xl font-semibold text-slate-900">
+            {" "}
+            Performance Optimization
+          </h3>
           <p className="text-slate-500 text-sm leading-relaxed">
             Optimizing website performance to ensure fast loading times and
             smooth user interactions, improving overall user satisfaction.
