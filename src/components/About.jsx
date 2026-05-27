@@ -3,9 +3,20 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div id="about" className="flex justify-between items-center px-8 py-20 min-h-screen">
-      <div className="flex w-1/2 gap-4 flex-col">
-        <h1 className="text-3xl font-bold text-slate-900">About me</h1>
+    <div id="about" className="flex flex-col md:flex-row justify-between items-center px-8 py-20 min-h-screen">
+      
+      <h1 className="text-3xl font-bold text-slate-900 mb-4">About me</h1>
+      <div className="w-full md:w-1/2 flex justify-center">
+        <Image
+            className="object-cover rounded-lg shadow-lg"
+          src="/images/About.jpeg"
+          alt="About ABM Mejbha"
+          width={300}
+          height={300}
+        />
+      </div>
+
+      <div className="mt-4 flex w-full md:w-1/2 gap-4 flex-col">
         <h2 className="text-xl font-semibold text-blue-600">Frontend Developer</h2>
         <p className="text-sm text-slate-500 leading-relaxed">
           I'm a frontend developer with a passion for creating beautiful and
@@ -29,15 +40,7 @@ const About = () => {
         </button>
       </div>
 
-      <div className="w-1/2 flex justify-center">
-        <Image
-            className="object-cover rounded-lg shadow-lg"
-          src="/images/About.jpeg"
-          alt="About ABM Mejbha"
-          width={300}
-          height={300}
-        />
-      </div>
+      
     </div>
   );
 };
