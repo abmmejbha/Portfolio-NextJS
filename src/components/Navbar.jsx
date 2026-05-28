@@ -9,10 +9,13 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#c8e0f0] dark:bg-[#364958] border-b border-slate-200">
+    <nav className="fixed top-0 w-full z-50 bg-[#c8e0f0] dark:bg-[#364958]  border-b border-[#38a3a5] dark:border-[#3b6064] shadow-md">
       {/* main navigation bar container */}
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 bg-white border-b border-slate-200 ">
-        <Link className="text-xl font-bold text-[#22577a] dark:text-[#87bba2]" href="/">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+        <Link
+          className="text-xl font-bold text-[#22577a] dark:text-[#87bba2]"
+          href="/"
+        >
           ABM Mejbha
         </Link>
 
@@ -61,7 +64,7 @@ export default function Navbar() {
         </button>
         <button
           type="button"
-          className="block md:hidden cursor-pointer text-2xl text-slate-700 p-2 active:bg-slate-100 rounded-lg"
+          className="text-[#22577a] dark:text-[#c9e4ca] block md:hidden cursor-pointer text-2xl p-2 active:bg-slate-100 rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           // onTouchEnd={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
         >
@@ -71,20 +74,40 @@ export default function Navbar() {
 
       {/* Mobile Dropdown menu */}
       {isOpen && (
-        <div className="z-60 md:hidden flex flex-col gap-4 p-4 bg-white shadow-lg">
-          <Link onClick={() => setIsOpen(false)} href="/">
+        <div className="z-60 md:hidden flex flex-col gap-4 p-4 bg-[#c8e0f0] dark:bg-[#364958] shadow-lg">
+          <Link
+            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
+            onClick={() => setIsOpen(false)}
+            href="/"
+          >
             Home
           </Link>
-          <Link onClick={() => setIsOpen(false)} href="#about">
+          <Link
+            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
+            onClick={() => setIsOpen(false)}
+            href="#about"
+          >
             About
           </Link>
-          <Link onClick={() => setIsOpen(false)} href="#services">
+          <Link
+            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
+            onClick={() => setIsOpen(false)}
+            href="#services"
+          >
             Services
           </Link>
-          <Link onClick={() => setIsOpen(false)} href="#portfolio">
+          <Link
+            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
+            onClick={() => setIsOpen(false)}
+            href="#portfolio"
+          >
             Portfolio
           </Link>
-          <Link onClick={() => setIsOpen(false)} href="#contact">
+          <Link
+            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-[#38a3a5] dark:hover:text-[#55828b] transition-colors"
+            onClick={() => setIsOpen(false)}
+            href="#contact"
+          >
             Contact
           </Link>
         </div>
