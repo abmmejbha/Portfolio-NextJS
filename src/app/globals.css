@@ -22,14 +22,12 @@
 }
 
 @theme {
-  @theme {
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-accent: var(--accent);
   --color-border-color: var(--border);
-}
 }
 
 @keyframes float{

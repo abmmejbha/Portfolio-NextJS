@@ -64,7 +64,7 @@ export default function Navbar() {
         </button>
         <button
           type="button"
-          className="text-[#22577a] dark:text-[#c9e4ca] block md:hidden cursor-pointer text-2xl p-2 active:bg-slate-100 rounded-lg"
+          className="text-text-primary dark:text-text-secondary block md:hidden cursor-pointer text-2xl p-2 active:bg-slate-100 rounded-lg"
           onClick={() => setIsOpen(!isOpen)}
           // onTouchEnd={(e) => { e.preventDefault(); setIsOpen(!isOpen); }}
         >
@@ -76,35 +76,35 @@ export default function Navbar() {
       {isOpen && (
         <div className="z-60 md:hidden flex flex-col gap-4 p-4 bg-bg-primary shadow-lg">
           <Link
-            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-text-secondary transition-colors"
+            className="text-text-primary hover:text-text-secondary transition-colors"
             onClick={() => setIsOpen(false)}
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-text-secondary transition-colors"
+            className="text-text-primary hover:text-text-secondary transition-colors"
             onClick={() => setIsOpen(false)}
             href="#about"
           >
             About
           </Link>
           <Link
-            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-text-secondary transition-colors"
+            className="text-text-primary hover:text-text-secondary transition-colors"
             onClick={() => setIsOpen(false)}
             href="#services"
           >
             Services
           </Link>
           <Link
-            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-text-secondary transition-colors"
+            className="text-text-primary hover:text-text-secondary transition-colors"
             onClick={() => setIsOpen(false)}
             href="#portfolio"
           >
             Portfolio
           </Link>
           <Link
-            className="text-[#22577a] dark:text-[#c9e5ca] hover:text-text-secondary transition-colors"
+            className="text-text-primary hover:text-text-secondary transition-colors"
             onClick={() => setIsOpen(false)}
             href="#contact"
           >
