@@ -4,6 +4,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-primary: #c8e0f0;
+  --bg-secondary: #d4f0f0;
+  --text-primary: #22577a;
+  --text-secondary: #38a3a5;
+  --accent: #57cc99;
+  --border: #38a3a5;
+}
+
+.dark {
+  --bg-primary: #364958;
+  --bg-secondary: #3b6064;
+  --text-primary: #d3e3e5;
+  --text-secondary: #c9e4ca;
+  --accent: #55828b;
+  --border: #3b6064
+}
+
+@theme {
+  @theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-border-color: var(--border);
+}
 }
 
 @keyframes float{
