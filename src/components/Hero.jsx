@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="bg-[#c8e0f0] dark:bg-[#364958] min-h-screen">
-      <div className="bg-[#c8e0f0] dark:bg-[#364958] flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
+    <div className="bg-bg-primary min-h-screen">
+      <div className="bg-bg-primary flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
         {/* image div */}
         <div className="w-full md:w-1/2 flex justify-center">
           {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounde-2xl shadow-lg"> */}
@@ -22,12 +22,10 @@ const Hero = () => {
         {/* text div */}
         <div className="flex flex-col gap-4 w-full md:w-1/2">
           {/* Left */}
-          <p className="text-[#38a3a5] dark:text-[#55828b] text-lg  font-medium">
+          <p className="text-text-secondary text-lg  font-medium">
             Hello, It's me
           </p>
-          <h1 className="text-[#22577a] dark:text-[#d3e3e5] text-4xl font-bold">
-            ABM Mejbha
-          </h1>{" "}
+          <h1 className="text-text-primary text-4xl font-bold">ABM Mejbha</h1>{" "}
           <p className="dark:text-[#87bba2] text-2xl font-semibold text-[#22577a]">
             And I'm a Web Developer
           </p>
