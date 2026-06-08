@@ -30,10 +30,10 @@ const Contact = () => {
       </div>
       <div className="px-8 py-4 flex flex-col items-center gap-6">
         <textarea
-          className="w-full h-32 bg-white rounded-2xl text-text-primary p-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+          className="w-full h-32 bg-white rounded-2xl text-text-primary p-4 focus:outline-none focus:ring-2 focus:ring-accent"
           placeholder="Your Message"
         />
-        <button className=" bg-accenthover:bg-bg-secondary rounded-lg px-20 py-2 text-white font-semibold">
+        <button className=" bg-accent hover:bg-bg-secondary rounded-lg px-20 py-2 text-white font-semibold">
           Send Message
         </button>
       </div>
