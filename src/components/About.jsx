@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div id="about" className="px-8 py-20 bg-linear-to-br from-slate-200 via-blue-200 to-indigo-200">
-      <h1 className="text-center text-3xl font-bold text-slate-900 mb-4">
+    <div id="about" className="px-8 py-20 bg-bg-secondary">
+      <h1 className="text-center text-3xl font-bold text-text-primary mb-4">
         About me
       </h1>
 
@@ -20,10 +20,10 @@ const About = () => {
         </div>
 
         <div className="mt-2 flex w-full md:w-1/2 gap-4 flex-col">
-          <h2 className="text-xl font-semibold text-blue-600">
+          <h2 className="text-xl font-semibold text-text-secondary">
             Frontend Developer
           </h2>
-          <p className="text-sm text-slate-500 leading-relaxed">
+          <p className="text-sm text-text-primary leading-relaxed">
             I'm a frontend developer with a passion for creating beautiful and
             functional websites. I have experience with HTML, CSS, JavaScript,
             React and Next.js. I am always looking for new challenges and
@@ -32,7 +32,7 @@ const About = () => {
             like this portfolio website and also User Management System,
             Currency Converter, Movie Search App.
           </p>
-          <p className="text-sm text-slate-500 leading-relaxed">
+          <p className="text-sm text-text-primary leading-relaxed">
             I have also experience with C and C++, I've built Hospital
             Management System with C and basic Snake game in C++. I am currently
             studying Computer Science and Engineering at Bangladesh University
@@ -40,7 +40,7 @@ const About = () => {
             opportunities and open to new projects. Please feel free to contact
             me if you have any questions or would like to work together.
           </p>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer">
+          <button className="bg-accent hover:bg-bg-secondary text-white px-4 py-2 rounded-lg transition-colors cursor-pointer">
             Read more
           </button>
         </div>

@@ -12,10 +12,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-bg-primary border-b border-border-color shadow-md">
       {/* main navigation bar container */}
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
-        <Link
-          className="text-xl font-bold text-text-primary"
-          href="/"
-        >
+        <Link className="text-xl font-bold text-text-primary" href="/">
           ABM Mejbha
         </Link>
 
