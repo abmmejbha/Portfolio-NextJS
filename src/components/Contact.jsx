@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div id="contact" className="min-h-screen bg-bg-primary">
       <h1 className="pt-20 pb-12 font-bold text-3xl text-center text-text-primary ">
-        Contact <span className="text-blue-900">Me!</span>
+        Contact <span className="text-accent">Me!</span>
       </h1>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 px-8 py-4">
         <input
@@ -30,7 +30,7 @@ const Contact = () => {
       </div>
       <div className="px-8 py-4 flex flex-col items-center gap-6">
         <textarea
-          className="w-full h-32 bg-white rounded-2xl text-text-primary p-4 focus:outline-none focus:ring-2 focus:ring-accent"
+          className="w-full h-32 bg-bg-secondary rounded-2xl text-text-primary p-4 focus:outline-none focus:ring-2 focus:ring-accent"
           placeholder="Your Message"
         />
         <button className=" bg-accent hover:bg-bg-secondary rounded-lg px-20 py-2 text-white font-semibold">

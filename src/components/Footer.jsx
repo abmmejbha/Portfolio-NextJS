@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-slate-800 px-8 py-6 flex flex-col items-center gap-6">
+    <div className="bg-bg-secondary px-8 py-6 flex flex-col items-center gap-6">
       <div className="flex gap-6">
         <a
-          className="text-slate-400 text-sm hover:text-white transition-colors"
+          className="text-text-secondary text-sm hover:text-text-primary transition-colors"
           href="https://linkedin.com/in/abm-mejbha-092786202"
           target="_blank"
           rel="noopener noreferrer"
@@ -13,7 +13,7 @@ export default function Footer() {
           LinkedIn
         </a>
         <a
-          className="text-slate-400 text-sm hover:text-white transition-colors"
+          className="text-text-secondary text-sm hover:text-text-primary transition-colors"
           href="https://github.com/abmmejbha"
           target="_blank"
           rel="noopener noreferrer"
@@ -21,7 +21,7 @@ export default function Footer() {
           GitHub
         </a>
         <a
-          className="text-slate-400 text-sm hover:text-white transition-colors"
+          className="text-text-secondary text-sm hover:text-text-primary transition-colors"
           href="https://instagram.com/suweet.ka"
           target="_blank"
           rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function Footer() {
           Instagram
         </a>
       </div>
-      <p className="text-slate-500 text-sm">
+      <p className="text-text-primary text-sm">
         &copy; {new Date().getFullYear()} ABM Mejbha. All rights reserved.
       </p>
     </div>
