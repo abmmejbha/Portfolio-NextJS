@@ -15,7 +15,7 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Currency Converter
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">A React app that converts currencies in real-time using live exchange rate APIs. Features a quick swap button, custom useCurrencyInfo hook, and optimized performance with useState & useEffect.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -38,7 +38,7 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Movie Search App
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">A React app that searches movies in real-time using the OMDB API. Users can search by title and instantly see movie details like poster, year, and ratings.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -61,17 +61,17 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Portfolio
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">My personal portfolio built with Next.js and Tailwind CSS. Features dark/light theme toggle, responsive design, and smooth animations.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
-              href=""
+              href="https://abmmejbha.github.io/Portfolio-NextJS/"
             >
               Live Demo
             </a>
             <a
               className="px-4 py-2 border border-border-color text-text-primary rounded-lg font-semibold hover:border-accent hover:text-accent  transition-colors"
-              href=""
+              href="https://github.com/abmmejbha/Portfolio-NextJS"
             >
               Github Link
             </a>
@@ -84,17 +84,17 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             User Management System
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">A full-stack web app for managing users — add, edit, delete, and search users. Built with React and Node.js and uses MongoDB Atlas for data persistence.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
-              href=""
+              href="https://user-management-app-nu-six.vercel.app/"
             >
               Live Demo
             </a>
             <a
               className="px-4 py-2 border border-border-color text-text-primary rounded-lg font-semibold hover:border-accent hover:text-accent  transition-colors"
-              href=""
+              href="https://github.com/abmmejbha/userManagementApp"
             >
               Github Link
             </a>
@@ -107,7 +107,7 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Hospital Management System (C)
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">A console-based hospital management system built in C. Manages patient records, doctor info, and appointments using file handling and structs.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -117,7 +117,7 @@ export default function Portfolio() {
             </a>
             <a
               className="px-4 py-2 border border-border-color text-text-primary rounded-lg font-semibold hover:border-accent hover:text-accent  transition-colors"
-              href=""
+              href="https://github.com/abmmejbha/Practice-Codes-2024/blob/main/C_Practice/projects/Hospital_management_system.c"
             >
               Github Link
             </a>
@@ -130,7 +130,7 @@ export default function Portfolio() {
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Snake Game (C++)
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">Description</p>
+          <p className="text-sm text-text-primary leading-relaxed">A classic Snake game built in C++ using console graphics. Features score tracking, increasing speed, and game over detection.</p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -140,7 +140,7 @@ export default function Portfolio() {
             </a>
             <a
               className="px-4 py-2 border border-border-color text-text-primary rounded-lg font-semibold hover:border-accent hover:text-accent  transition-colors"
-              href=""
+              href="https://github.com/abmmejbha/Practice-Codes-2024/blob/main/CPP_Practice/project/snake.cpp"
             >
               Github Link
             </a>
