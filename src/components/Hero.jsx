@@ -59,9 +59,13 @@ const Hero = () => {
               <FaInstagram size={24} />
             </a>
           </div>
-          <button className="bg-accent hover:bg-bg-secondary hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] px-6 py-3 rounded-lg text-white hover:text-shadow-black font-semibold cursor-pointer w-fit shadow-md hover:scale-103 transition-all">
+          <a
+            href="/cv.pdf"
+            download="ABM_Mejbha_CV.pdf"
+            className="bg-accent hover:bg-bg-secondary hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] px-6 py-3 rounded-lg text-white hover:text-shadow-black font-semibold cursor-pointer w-fit shadow-md hover:scale-103 transition-all"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </div>
