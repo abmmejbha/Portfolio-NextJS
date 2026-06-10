@@ -1,8 +1,37 @@
+"use client";
 import React from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
+  const titles = [
+    "Web Developer",
+    "Frontend Developer",
+    "React Enthusiast",
+    "Next.js Lover",
+  ];
+  const [currentTitle, setCurrentTitle] = useState("");
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (charIndex < titles[titleIndex].length) {
+      const timeout = setTimeout(() => {
+        setCurrentTitle((prev) => prev + titles[titleIndex][charIndex]);
+        setCharIndex((prev) => prev + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setCurrentTitle("");
+        setCharIndex(0);
+        setTitleIndex((prev) => (prev + 1) % titles.length);
+      }, 1500);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, titleIndex]);
+
   return (
     <div className="bg-bg-primary  min-h-screen">
       <div className="bg-bg-primary flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
@@ -25,9 +54,10 @@ const Hero = () => {
           <p className="text-text-secondary text-lg  font-medium">
             Hello, It's me
           </p>
-          <h1 className="text-text-primary text-4xl font-bold">ABM Mejbha</h1>{" "}
+          <h1 className="text-text-primary text-4xl font-bold drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]">ABM Mejbha</h1>{" "}
           <p className="text-text-primary text-2xl font-semibold">
-            And I'm a Web Developer
+            And I'm a <span className="text-accent">{currentTitle}</span>
+            <span className="animate-pulse">|</span>
           </p>
           <p className="text-text-primary text-sm leading-relaxed">
             Frontend developer skilled in React, Next.js & Node.js. Currently
