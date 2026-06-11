@@ -10,7 +10,7 @@ export default function Portfolio() {
 
       <div className="px-2 py-20 gap-8 min-h-screen justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {/* Currency Converter */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Currency Converter
@@ -33,7 +33,7 @@ export default function Portfolio() {
         </div>
 
         {/* Movie search App */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Movie Search App
@@ -56,7 +56,7 @@ export default function Portfolio() {
         </div>
 
         {/* Portfolio */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Portfolio
@@ -79,7 +79,7 @@ export default function Portfolio() {
         </div>
 
         {/* User Management System */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             User Management System
@@ -102,7 +102,7 @@ export default function Portfolio() {
         </div>
 
         {/* Hospital Management System */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Hospital Management System (C)
@@ -125,7 +125,7 @@ export default function Portfolio() {
         </div>
 
         {/* Snake Game */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color">
+        <div className=" flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
            
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Snake Game (C++)
