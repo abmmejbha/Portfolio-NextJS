@@ -47,7 +47,7 @@ const Contact = () => {
       </h1>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 px-8 py-4">
         <input
-          className="bg-white text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
+          className="bg-bg-secondary text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
           type="text"
           placeholder="Enter Name"
           name="from_name"
@@ -55,7 +55,7 @@ const Contact = () => {
           onChange={handleChange}
         />
         <input
-          className="bg-white text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
+          className="bg-bg-secondary text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
           type="text"
           placeholder="Enter Email"
           name="from_email"
@@ -63,7 +63,7 @@ const Contact = () => {
           onChange={handleChange}
         />
         <input
-          className="bg-white text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
+          className="bg-bg-secondary text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
           type="text"
           placeholder="Phone number"
           name="phone"
@@ -71,7 +71,7 @@ const Contact = () => {
           onChange={handleChange}
         />
         <input
-          className="bg-white text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
+          className="bg-bg-secondary text-text-primary w-full px-4 py-4 border border-border-color rounded-2xl outline-none focus:border-accent transition-colors"
           type="text"
           placeholder="Email Subject"
           name="subject"
