@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-bg-primary">
+    <div id="contact" className="p-8 min-h-screen bg-bg-primary">
       <h1 className="pt-20 pb-12 font-bold text-3xl text-center text-text-primary ">
         Contact <span className="text-accent">Me!</span>
       </h1>
