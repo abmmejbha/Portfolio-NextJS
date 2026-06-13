@@ -10,6 +10,7 @@ const Hero = () => {
     "Frontend Developer",
     "React Enthusiast",
     "Next.js Lover",
+    "Programmer"
   ];
   const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);

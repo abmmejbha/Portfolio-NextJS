@@ -7,11 +7,12 @@
 
 :root {
   /* ☀️ Premium Light Mode - Pure Ice Tech */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --bg-primary: #caf0f8;         /* একদম ক্রিস্টাল লাইট আইস ব্লু মেইন ব্যাকগ্রাউন্ড */
-  --bg-secondary: #ade8f4;       /* সফট ক্লাউড ব্লু সেকশন/কার্ড লেয়ার */
+  --bg-secondary: #ade8f4;       /* সফট ক্লাউড ব্লু সেকশন/কার্ড লেয়ার */
   --text-primary: #03045e;       /* ডিপ সাইবার ব্লু প্রধান টেক্সট */
   --text-secondary: #0077b6;     /* ওশেন ব্লু সাবটেক্সট */
-  --accent: #0096c7;             /* ব্রাইট ওয়াটার ব্লু - লাইট মোডে অ্যাকসেন্ট বাটন */
+  --accent: #0096c7;             /* BRIGHT ওয়াটার ব্লু - লাইট মোডে অ্যাকসেন্ট বাটন */
   --accent-hover: #0077b6;       
   --border: #90e0ef;             
   --background: #caf0f8;         
@@ -52,12 +53,14 @@
 }
 
 .dark {
-  /* 🌙 Premium Dark Mode - Deep Cyber Abyss (ওয়ার্ল্ড ক্লাস ভাইব) */
+  /* 🌙 Premium Dark Mode - Deep Cyber Abyss (ওয়ার্ল্ড класс ভাইব) */
+  /*  এখানে var(--font-inter) দিয়ে ফিক্স করা হয়েছে যেন ডার্ক মোডেও Next.js ফন্ট পায় */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --bg-primary: #03045e;         /* গভীর অতল মহাসাগরের মতো লাক্সারি ডার্ক ব্যাকগ্রাউন্ড */
-  --bg-secondary: #023e8a;       /* রিচ রয়্যাল নেভি - কার্ড ও সেকশন লেয়ার */
-  --text-primary: #caf0f8;       /* আইস হোয়াইট - ডার্ক মোডে ক্রিস্টাল ক্লিয়ার টেক্সট */
+  --bg-secondary: #023e8a;       /* রিচ রয়্যাল নেভি - কার্ড ও সেকশন লেয়ার */
+  --text-primary: #caf0f8;       /* আইস হোয়াইট - ডার্ক মোডে ক্রিস্টাল ক্লিয়ার টেক্সট */
   --text-secondary: #90e0ef;     /* লাইট স্কাই ব্লু সাবটেক্সট */
-  --accent: #00b4d8;             /* নিয়ন ওশেন সাইয়ান - ডার্ক মোডে এই বাটনগুলো জাস্ট গ্লো করবে */
+  --accent: #00b4d8;             /* নিয়ন ওশেন সাইয়ান - ডার্ক মোডে এই বাটনগুলো জাস্ট গ্লো করবে */
   --accent-hover: #48cae4;       
   --border: #0077b6;             
   --background: #03045e;         
@@ -173,9 +176,11 @@ html{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-sans);
   }
   html {
     @apply font-sans;
+    font-family: var(--font-sans);
   }
   
   /* Premium button styles */

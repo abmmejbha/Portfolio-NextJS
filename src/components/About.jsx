@@ -12,6 +12,10 @@ const About = () => {
 
   return (
     <div id="about" className="px-8 py-20 bg-bg-secondary">
+      
+      <div>
+        
+      </div>
       <h1 className="text-center text-3xl font-bold text-text-primary mb-4">
         About me
       </h1>
