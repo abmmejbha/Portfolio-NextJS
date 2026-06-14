@@ -38,7 +38,7 @@ const Hero = () => {
       <div className="bg-bg-primary flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
         {/* image div */}
         <div className="w-full md:w-1/2 flex justify-center">
-          {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounde-2xl shadow-lg"> */}
+          {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounded-2xl shadow-lg"> */}
           <Image
             className="shadow-[0_0_20px_rgba(56,163,165,0.8)]  floating object-cover rounded-2xl hover:scale-105 transition-all duration-300 "
             src="/images/me.PNG"
@@ -93,7 +93,7 @@ const Hero = () => {
           <a
             href="/cv.pdf"
             download="ABM_Mejbha_CV.pdf"
-            className="bg-accent hover:bg-bg-secondary hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] px-6 py-3 rounded-lg text-white hover:text-shadow-black font-semibold cursor-pointer w-fit shadow-md hover:scale-103 transition-all"
+            className="bg-accent hover:bg-bg-secondary hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] px-6 py-3 rounded-lg text-white hover:text-shadow-black font-semibold cursor-pointer w-fit shadow-md hover:scale-105 transition-all"
           >
             Download CV
           </a>

@@ -11,11 +11,15 @@ export default function Portfolio() {
       <div className="px-2 py-10 gap-8 min-h-screen justify-between grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {/* Currency Converter */}
         <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Currency Converter
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">A React app that converts currencies in real-time using live exchange rate APIs. Features a quick swap button, custom useCurrencyInfo hook, and optimized performance with useState & useEffect.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            A React app that converts currencies in real-time using live
+            exchange rate APIs. Features a quick swap button, custom
+            useCurrencyInfo hook, and optimized performance with useState &
+            useEffect.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -33,12 +37,15 @@ export default function Portfolio() {
         </div>
 
         {/* Movie search App */}
-        <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
+        <div className="flex flex-col gap-2 glass shadow-premium p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Movie Search App
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">A React app that searches movies in real-time using the OMDB API. Users can search by title and instantly see movie details like poster, year, and ratings.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            A React app that searches movies in real-time using the OMDB API.
+            Users can search by title and instantly see movie details like
+            poster, year, and ratings.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -57,11 +64,13 @@ export default function Portfolio() {
 
         {/* Portfolio */}
         <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Portfolio
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">My personal portfolio built with Next.js and Tailwind CSS. Features dark/light theme toggle, responsive design, and smooth animations.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            My personal portfolio built with Next.js and Tailwind CSS. Features
+            dark/light theme toggle, responsive design, and smooth animations.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -80,11 +89,14 @@ export default function Portfolio() {
 
         {/* User Management System */}
         <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             User Management System
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">A full-stack web app for managing users — add, edit, delete, and search users. Built with React and Node.js and uses MongoDB Atlas for data persistence.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            A full-stack web app for managing users — add, edit, delete, and
+            search users. Built with React and Node.js and uses MongoDB Atlas
+            for data persistence.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -103,11 +115,14 @@ export default function Portfolio() {
 
         {/* Hospital Management System */}
         <div className="flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Hospital Management System (C)
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">A console-based hospital management system built in C. Manages patient records, doctor info, and appointments using file handling and structs.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            A console-based hospital management system built in C. Manages
+            patient records, doctor info, and appointments using file handling
+            and structs.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"
@@ -126,11 +141,13 @@ export default function Portfolio() {
 
         {/* Snake Game */}
         <div className=" flex flex-col gap-2 bg-bg-secondary p-6  shadow-lg rounded-2xl hover:bg-bg-primary hover:scale-103 transition-all border border-border-color hover:shadow-[0_0_20px_rgba(56,163,165,0.5)]">
-           
           <h3 className="text-2xl font-bold text-text-primary mb-6 text-center">
             Snake Game (C++)
           </h3>
-          <p className="text-sm text-text-primary leading-relaxed">A classic Snake game built in C++ using console graphics. Features score tracking, increasing speed, and game over detection.</p>
+          <p className="text-sm text-text-primary leading-relaxed">
+            A classic Snake game built in C++ using console graphics. Features
+            score tracking, increasing speed, and game over detection.
+          </p>
           <div className="flex gap-3">
             <a
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:bg-bg-secondary transition-colors"

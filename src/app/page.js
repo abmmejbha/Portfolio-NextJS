@@ -8,16 +8,14 @@ import Services from '@/components/Services'
 
 export default function Home() {
   return (
-    <main className="bg-slate-100 min-h-screen pt-16">
-
-    <Navbar/>
-    <Hero/>
-    <About/>
-    <Services/>
-    <Portfolio/>
-    <Contact/>
-    <Footer/>
-
+    <main className="bg-background min-h-screen pt-16 transition-colors duration-300">
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Services/>
+      <Portfolio/>
+      <Contact/>
+      <Footer/>
     </main>
   )
 }

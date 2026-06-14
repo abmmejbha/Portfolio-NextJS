@@ -3,9 +3,9 @@ import { ThemeProvider } from "next-themes"
 import "./globals.css"
 
 const inter = Inter({
-  sunsets: ['latin'], 
+  subsets: ['latin'], 
   weight: ['300', '400', '600', '700'],
-  variable: 'font-inter'
+  variable: '--font-inter'
 })
 
 export default function RootLayout({ children }) {
