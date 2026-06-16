@@ -10,7 +10,7 @@ const Hero = () => {
     "Frontend Developer",
     "React Enthusiast",
     "Next.js Lover",
-    "Programmer"
+    "Programmer",
   ];
   const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
@@ -55,7 +55,9 @@ const Hero = () => {
           <p className="text-text-secondary text-lg  font-medium">
             Hello, It's me
           </p>
-          <h1 className="text-text-primary text-4xl font-bold drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]">ABM Mejbha</h1>{" "}
+          <h1 className="text-text-primary text-4xl font-bold drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]">
+            ABM Mejbha
+          </h1>{" "}
           <p className="text-text-primary text-2xl font-semibold">
             And I'm a <span className="text-accent">{currentTitle}</span>
             <span className="animate-pulse">|</span>
