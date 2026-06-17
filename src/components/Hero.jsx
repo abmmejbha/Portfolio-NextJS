@@ -34,19 +34,22 @@ const Hero = () => {
   }, [charIndex, titleIndex]);
 
   return (
-    <div className="bg-bg-primary  min-h-screen">
+    <div className="bg-bg-primary  min-h-screen relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-accent/40 rounded-full blur-[100px]"></div>
+        <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent/40 rounded-full blur-[100px]"></div>
+      </div>
       <div className="bg-bg-primary flex flex-col md:flex-row-reverse justify-between items-center pb-20 pt-24 px-8 py-20 min-h-screen">
         {/* image div */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounded-2xl shadow-lg"> */}
+        <div className="w-full md:w-1/2 flex justify-center relative">
+          <div className="absolute w-72 h-72 rounded-full border-2 border-dashed border-accent/50 animate-[spin_20s_linear_infinite]"></div>
           <Image
-            className="glow floating object-cover rounded-2xl hover:scale-105 transition-all duration-300 "
+            className="glow floating object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-72 h-72"
             src="/images/me.PNG"
             alt="ABM Mejbha"
             width={300}
             height={300}
           />
-          {/* </div> */}
         </div>
 
         {/* text div */}
