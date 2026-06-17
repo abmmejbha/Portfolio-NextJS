@@ -8,7 +8,7 @@ export default function Services() {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl shadow-lg hover:shadow-xl transition-all bg-bg-primary">
+        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
           <span className="text-4xl mb-2 text-center">🌐</span>
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}
@@ -19,7 +19,7 @@ export default function Services() {
             technologies like React, Next.js, and Node.js.
           </p>
         </div>
-        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl shadow-lg hover:shadow-xl transition-all bg-bg-primary">
+        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
           <span className="text-4xl mb-2 text-center">🎨</span>
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}
@@ -30,7 +30,7 @@ export default function Services() {
             enhance user experience and engagement.
           </p>
         </div>
-        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl shadow-lg hover:shadow-xl transition-all bg-bg-primary">
+        <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
           <span className="text-4xl mb-2 text-center">⚡</span>
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}

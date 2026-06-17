@@ -9,7 +9,7 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-bg-primary border-b border-border-color shadow-md">
+    <nav className="fixed top-0 w-full z-50 glass shadow-premium backdrop-blur-sm">
       {/* main navigation bar container */}
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
         <Link className="text-xl font-bold text-text-primary" href="/">

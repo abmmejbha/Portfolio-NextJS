@@ -12,10 +12,7 @@ const About = () => {
 
   return (
     <div id="about" className="px-8 py-20 bg-bg-secondary">
-      
-      <div>
-        
-      </div>
+      <div></div>
       <h1 className="text-center text-3xl font-bold text-text-primary mb-4">
         About me
       </h1>
@@ -23,7 +20,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
         <div className="p-2 w-full md:w-1/2 flex justify-center">
           <Image
-            className="object-cover rounded-lg shadow-lg"
+            className="object-cover rounded-3xl border-2 border-accent glow transition-all duration-300"
             src="/images/About.jpeg"
             alt="About ABM Mejbha"
             width={300}
@@ -31,7 +28,10 @@ const About = () => {
           />
         </div>
 
-        <div className="mt-2 flex w-full md:w-1/2 gap-4 flex-col">
+        <div className="mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8">
+          <span className="inline-block px-4 py-1 rounded-full glass text-accent text-sm font-bold uppercase tracking-wider w-fit">
+            About Me
+          </span>
           <h2 className="text-xl font-semibold text-text-secondary">
             Web Developer
           </h2>

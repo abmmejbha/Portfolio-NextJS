@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           {/* <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounded-2xl shadow-lg"> */}
           <Image
-            className="shadow-[0_0_20px_rgba(56,163,165,0.8)]  floating object-cover rounded-2xl hover:scale-105 transition-all duration-300 "
+            className="glow floating object-cover rounded-2xl hover:scale-105 transition-all duration-300 "
             src="/images/me.PNG"
             alt="ABM Mejbha"
             width={300}
@@ -55,8 +55,8 @@ const Hero = () => {
           <p className="text-text-secondary text-lg  font-medium">
             Hello, It's me
           </p>
-          <h1 className="text-text-primary text-4xl font-bold drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]">
-            ABM Mejbha
+          <h1 className="text-text-primary text-4xl font-bold gradient-text">
+            ABM MEJBHA
           </h1>{" "}
           <p className="text-text-primary text-2xl font-semibold">
             And I'm a <span className="text-accent">{currentTitle}</span>
@@ -68,7 +68,7 @@ const Hero = () => {
           </p>
           <div className="flex gap-4">
             <a
-              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] transition-all duration-300"
+              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
               href="https://github.com/abmmejbha"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const Hero = () => {
               <FaGithub size={24} />
             </a>
             <a
-              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] transition-all duration-300"
+              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
               href="https://www.linkedin.com/in/abm-mejbha-092786202"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Hero = () => {
               <FaLinkedin size={24} />
             </a>
             <a
-              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white hover:shadow-[0_0_20px_rgba(56,163,165,0.8)] transition-all duration-300"
+              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
               href="https://www.instagram.com/suweet.ka"
               target="_blank"
               rel="noopener noreferrer"
