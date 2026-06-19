@@ -29,9 +29,10 @@ export default function TechMarquee() {
           {duplicated.map((skill, index) => (
             <div
               key={index}
-             className="px-8 py-4 rounded-2xl glass shadow-premium text-text-primary font-bold text-lg border border-accent"
+             className="flex items-center gap-3 px-8 py-4 rounded-2xl glass shadow-premium text-text-primary font-bold text-lg border border-accent"
             >
-              {skill}
+              {skill.icon}
+              <span>{skill.name}</span>
             </div>
           ))}
         </div>
