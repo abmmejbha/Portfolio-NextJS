@@ -23,19 +23,18 @@ const About = () => {
 
   return (
     <div id="about" className="px-8 py-20 bg-bg-secondary">
-      <div></div>
       <h1 className="text-center text-3xl font-bold text-text-primary mb-4">
         About me
       </h1>
 
-      <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-        <div className="mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8">
+      <div className="flex flex-col md:flex-row-reverse gap-8 items-center ">
+        <div className=" mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8">
           <span className="inline-block px-4 py-1 rounded-full glass text-accent text-sm font-bold uppercase tracking-wider w-fit">
             About Me
           </span>
 
           <h2 className="text-3xl md:text-4xl font-black leading-tight text-text-primary">
-            Turning Ideas Into{" "}
+            Turning vision Into{" "}
             <span className="gradient-text">Real Projects</span>
           </h2>
 
@@ -60,7 +59,7 @@ const About = () => {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-xl text-sm font-medium text-text-primary glass shadow-premium inline-block mr-2 mb-2"
+                className="px-4 py-2 rounded-md text-sm font-medium text-text-primary glass ring-accent inline-block mr-2 mb-2 border-sky-500 shadow-lg"
               >
                 {tech}
               </span>
@@ -80,7 +79,7 @@ const About = () => {
 
           <button
             onClick={() => setShowFull(!showFull)}
-            className="bg-accent hover:bg-bg-secondary text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
+            className="bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer font-bold"
           >
             {showFull ? "Read Less" : "Read More"}
           </button>

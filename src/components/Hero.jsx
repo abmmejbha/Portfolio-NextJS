@@ -2,7 +2,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
   const titles = [
@@ -55,14 +55,14 @@ const Hero = () => {
         {/* text div */}
         <div className="flex flex-col gap-4 w-full md:w-1/2">
           {/* Left */}
-          <p className="text-text-secondary text-lg  font-medium">
+          <p className="mt-3 text-text-secondary text-lg  font-medium">
             Hello, It's me
           </p>
-          <h1 className="text-text-primary text-4xl font-bold gradient-text">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-premium">
             ABM MEJBHA
           </h1>{" "}
           <p className="text-text-primary text-2xl font-semibold">
-            And I'm a <span className="text-accent">{currentTitle}</span>
+            And I'm a <span className="text-accent font-bold">{currentTitle}</span>
             <span className="animate-pulse">|</span>
           </p>
           <p className="text-text-primary text-sm leading-relaxed">
@@ -72,11 +72,27 @@ const Hero = () => {
           <div className="flex gap-4">
             <a
               className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
-              href="https://github.com/abmmejbha"
+              href="https://www.facebook.com/suweet.ka"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF size={24} />
+            </a>
+            <a
+              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
+              href="https://www.github.com/abmmejbha"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub size={24} />
+            </a>
+            <a
+              className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
+              href="https://www.twitter.com/abmmejbha"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter size={24} />
             </a>
             <a
               className="border-accent text-accent hover:bg-accent w-10 h-10 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300"
