@@ -339,17 +339,17 @@ html{
 
 /* Glassmorphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .dark .glass {
-  background: rgba(2, 62, 138, 0.6); /* Glassmorphism Deep Ocean */
+  background: rgba(2, 62, 138, 0.7); /* Glassmorphism Deep Ocean */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
+  border: 1px solid rgba(0, 165, 211, 0.2);
 }
 
 /* Premium shadow */

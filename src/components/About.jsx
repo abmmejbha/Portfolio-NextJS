@@ -28,7 +28,7 @@ const About = () => {
       </h1>
 
       <div className="flex flex-col md:flex-row-reverse gap-8 items-center ">
-        <div className=" mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8">
+        <div className=" mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8 border-2 border-accent/40 backdrop-blur-md">
           <span className="inline-block px-4 py-1 rounded-full glass text-accent text-sm font-bold uppercase tracking-wider w-fit">
             About Me
           </span>
@@ -67,13 +67,13 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 rounded-2xl glass">
-              <h4 className="text-accent text-2xl font-bold">3rd</h4>
-              <p className="text-sm text-text-secondary">Year Student</p>
+            <div className="p-5 rounded-2xl glass border border-accent/30 hover:border-accent/60 transition-all hover:shadow-lg backdrop-blur-sm bg-gradient-to-br from-accent/10 to-transparent">
+              <h4 className="text-accent text-3xl font-bold">3rd</h4>
+              <p className="text-sm text-text-secondary font-semibold">Year Student</p>
             </div>
-            <div className="p-4 rounded-2xl glass">
-              <h4 className="text-accent text-2xl font-bold">5+</h4>
-              <p className="text-sm text-text-secondary">Projects Completed</p>
+            <div className="p-5 rounded-2xl glass border border-accent/30 hover:border-accent/60 transition-all hover:shadow-lg backdrop-blur-sm bg-gradient-to-br from-accent/10 to-transparent">
+              <h4 className="text-accent text-3xl font-bold">5+</h4>
+              <p className="text-sm text-text-secondary font-semibold">Projects Completed</p>
             </div>
           </div>
 
