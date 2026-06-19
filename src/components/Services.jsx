@@ -9,7 +9,9 @@ export default function Services() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
-          <span className="text-4xl mb-2 text-center">🌐</span>
+          <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-accent/10 border border-accent/10 mb-2">
+            🌐
+          </div>{" "}
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}
             Web Development
@@ -20,7 +22,9 @@ export default function Services() {
           </p>
         </div>
         <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
-          <span className="text-4xl mb-2 text-center">🎨</span>
+          <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-accent/10 border border-accent/10 mb-2">
+            🎨
+          </div>
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}
             UI/UX Responsive Design
@@ -31,7 +35,9 @@ export default function Services() {
           </p>
         </div>
         <div className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300">
-          <span className="text-4xl mb-2 text-center">⚡</span>
+          <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-accent/10 border border-accent/10 mb-2">
+            ⚡
+          </div>
           <h3 className="text-xl font-semibold text-text-primary">
             {" "}
             Performance Optimization

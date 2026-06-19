@@ -4,7 +4,7 @@ import React from "react";
 export default function Portfolio() {
   return (
     <div id="portfolio" className="px-8 py-20 bg-bg-primary">
-      <h2 className="text-4xl font-bold text-text-secondary mb-2">
+      <h2 className="text-4xl font-bold text-text-secondary mb-2 text-center">
         My Projects
       </h2>
 
