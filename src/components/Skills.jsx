@@ -63,8 +63,9 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="absolute top-0 left-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-r  to-transparent"></div>
-        <div className="absolute top-0 right-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-l  to-transparent"></div>
+       {/* সাইডের শ্যাডো - এখন গ্লোবাল ক্লাস দিয়ে নিয়ন্ত্রিত */}
+        <div className="skills-fade-left"></div>
+        <div className="skills-fade-right"></div>
 
       </div>
     </section>
