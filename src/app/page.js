@@ -5,7 +5,7 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Portfolio from '@/components/Portfolio'
 import Services from '@/components/Services'
-import TechMarquee from "@/components/TechMarquee"
+import Skills from "@/components/Skills"
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Services/>
-      <TechMarquee/>
+      <Skills/>
       <Portfolio/>
       <Contact/>
       <Footer/>

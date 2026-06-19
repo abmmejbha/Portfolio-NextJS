@@ -39,7 +39,7 @@ const skills = [
   { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
 ];
 
-export default function TechMarquee() {
+export default function Skills() {
   const duplicated = [...skills, ...skills];
 
   return (

@@ -178,7 +178,45 @@ html{
   * {
     @apply border-border outline-ring/50;
   }
+
+/* For Skill section  */
+@layer utilities {
+  /* স্কিল সেকশনের ব্যাকগ্রাউন্ড */
+  .skills-section-bg {
+    @apply bg-[#f7fbff] dark:bg-slate-900;
+  }
+
+  /* সাবটাইটেল টেক্সট */
+  .skills-subtitle {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+
+  /* স্কিল কার্ডের স্টাইল */
+  .skills-card {
+    @apply flex items-center gap-4 px-8 py-5 rounded-2xl border backdrop-blur-xl transition-all duration-300;
+    /* লাইট মোড স্টাইল */
+    @apply bg-white/70 border-sky-100 text-slate-800 ring-1 ring-sky-100 shadow-[0_18px_35px_-20px_rgba(15,23,42,0.22)];
+    /* লাইট মোড হোভার */
+    @apply hover:scale-105 hover:bg-white/85 hover:border-cyan-300 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.32),0_22px_45px_-18px_rgba(14,165,233,0.38),0_0_28px_rgba(34,211,238,0.16)];
+    
+    /* ডার্ক মোড স্টাইল */
+    @apply dark:bg-slate-800/40 dark:border-white/10 dark:text-slate-200 dark:shadow-xl;
+    /* ডার্ক মোড হোভার (লাইট মোডের গ্লো ইফেক্ট ডার্কে না চাইলে শুধু scale রাখতে পারেন) */
+    @apply dark:hover:scale-105 dark:hover:shadow-xl;
+  }
+
+  /* দুই পাশের শ্যাডো/গ্রাডিয়েন্ট এফেক্ট */
+  .skills-fade-left {
+    @apply absolute top-0 left-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-r from-[#f7fbff] to-transparent dark:from-slate-900;
+  }
   
+  .skills-fade-right {
+    @apply absolute top-0 right-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-l from-[#f7fbff] to-transparent dark:from-slate-900;
+  }
+}
+
+
+
   body {
     @apply text-foreground;
     background:
