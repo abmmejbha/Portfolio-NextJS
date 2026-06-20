@@ -62,7 +62,7 @@ const Contact = () => {
     {
       label: "LinkedIn",
       value: "https://www.linkedin.com/in/abm-mejbha/",
-      href: "https://www.linkedin.com/in/abm-mejbha/",
+      href: "https://www.linkedin.com/in/abm-mejbha-092786202",
       emoji: "🔗",
     },
   ];

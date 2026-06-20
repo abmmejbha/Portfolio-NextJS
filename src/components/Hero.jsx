@@ -78,7 +78,7 @@ const Hero = () => {
 
         {/* টেক্সট সেকশন (ফন্ট সাইজ সামান্য বাড়ানো হয়েছে এবং স্পেসিং ইমপ্রুভ করা হয়েছে) */}
         <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left items-center md:items-start">
-          <p className="text-text-primary text-xl font-medium tracking-wide">
+          <p className="text-2xl text-text-primary font-semibold tracking-wide">
             Hello, It's me
           </p>
           <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-premium tracking-tight">
