@@ -1,15 +1,5 @@
-import React from "react";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
+"use client";
 import { motion } from "framer-motion";
-
-// Original Logo
 import {
   SiHtml5,
   SiCss,
@@ -18,8 +8,7 @@ import {
   SiTailwindcss,
   SiPython,
   SiCplusplus,
-  SiMongodb,
-  SiNextdotjs,
+  SiVim,
 } from "react-icons/si";
 
 const skills = [
@@ -27,47 +16,71 @@ const skills = [
   { name: "CSS3", icon: <SiCss className="text-[#1572B6]" /> },
   {
     name: "JavaScript",
-    icon: <SiJavascript className="text-[#F7DF1E] bg-black" />,
+    icon: <SiJavascript className="text-[#F7DF1E] bg-black rounded" />,
   },
   { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-[#] bg-white" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-[#3ccd76]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-[#00d752]" /> },
-  { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
-  { name: "Git", icon: <FaGitAlt className="text-[#1f6d18] bg-white" /> },
   { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
+  { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
+  { name: "Vim", icon: <SiVim className="text-[#019733]" /> },
 ];
 
-export default function Skills() {
-  const duplicated = [...skills, ...skills];
+function Skills() {
+  const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <section>
-      <div className="py-16 bg-bg-secondary overflow-hidden relative">
-        <h2 className="text-3xl font-bold text-text-primary text-center mb-10">
+    <section id="skills" className="py-20 overflow-hidden relative">
+      <div className="container mx-auto px-6 mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-center"
+        >
           Tech Stack
-        </h2>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="text-sm text-center mt-4 skills-subtitle"
+        >
+          Here are the technologies I work with:
+        </motion.p>
+      </div>
 
-        <div className="flex overflow-hidden relative">
-          <div className="flex gap-6 animate-marquee whitespace-nowrap hover:[animation-play-state:paused]">
-            {duplicated.map((skill, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 px-8 py-4 rounded-2xl glass shadow-premium text-text-primary font-bold text-lg border border-accent"
-              >
+      <div className="relative flex overflow-hidden">
+        <motion.div
+          className="flex whitespace-nowrap gap-6 py-4"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            ease: "linear",
+            duration: 20,
+            repeat: Infinity,
+          }}
+        >
+          {duplicatedSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="text-text-primary font-bold skills-card-main shrink-0"
+            >
+              <span className="text-4xl flex items-center justify-center shrink-0">
                 {skill.icon}
-                <span>{skill.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+              </span>
+              <span className="text-xl font-bold tracking-wide truncate">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </motion.div>
 
-       {/* সাইডের শ্যাডো - এখন গ্লোবাল ক্লাস দিয়ে নিয়ন্ত্রিত */}
+        {/* সাইডের শ্যাডো - এখন গ্লোবাল সিএসএস থেকে জেনারেট হবে */}
         <div className="skills-fade-left"></div>
         <div className="skills-fade-right"></div>
-
       </div>
     </section>
   );
 }
+
+export default Skills;

@@ -179,44 +179,6 @@ html{
     @apply border-border outline-ring/50;
   }
 
-/* For Skill section  */
-@layer utilities {
-  /* স্কিল সেকশনের ব্যাকগ্রাউন্ড */
-  .skills-section-bg {
-    @apply bg-[#f7fbff] dark:bg-slate-900;
-  }
-
-  /* সাবটাইটেল টেক্সট */
-  .skills-subtitle {
-    @apply text-slate-500 dark:text-slate-400;
-  }
-
-  /* স্কিল কার্ডের স্টাইল */
-  .skills-card {
-    @apply flex items-center gap-4 px-8 py-5 rounded-2xl border backdrop-blur-xl transition-all duration-300;
-    /* লাইট মোড স্টাইল */
-    @apply bg-white/70 border-sky-100 text-slate-800 ring-1 ring-sky-100 shadow-[0_18px_35px_-20px_rgba(15,23,42,0.22)];
-    /* লাইট মোড হোভার */
-    @apply hover:scale-105 hover:bg-white/85 hover:border-cyan-300 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.32),0_22px_45px_-18px_rgba(14,165,233,0.38),0_0_28px_rgba(34,211,238,0.16)];
-    
-    /* ডার্ক মোড স্টাইল */
-    @apply dark:bg-slate-800/40 dark:border-white/10 dark:text-slate-200 dark:shadow-xl;
-    /* ডার্ক মোড হোভার (লাইট মোডের গ্লো ইফেক্ট ডার্কে না চাইলে শুধু scale রাখতে পারেন) */
-    @apply dark:hover:scale-105 dark:hover:shadow-xl;
-  }
-
-  /* দুই পাশের শ্যাডো/গ্রাডিয়েন্ট এফেক্ট */
-  .skills-fade-left {
-    @apply absolute top-0 left-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-r from-[#f7fbff] to-transparent dark:from-slate-900;
-  }
-  
-  .skills-fade-right {
-    @apply absolute top-0 right-0 h-full w-32 z-10 pointer-events-none bg-gradient-to-l from-[#f7fbff] to-transparent dark:from-slate-900;
-  }
-}
-
-
-
   body {
     @apply text-foreground;
     background:
@@ -231,7 +193,7 @@ html{
     font-family: var(--font-inter-stack);
   }
 
-   .dark body {
+  .dark body {
     background:
       radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.2) 0%, transparent 32%),
       radial-gradient(circle at 85% 10%, rgba(34, 211, 238, 0.16) 0%, transparent 26%),
@@ -243,7 +205,6 @@ html{
     font-family: var(--font-inter-stack);
   }
   
-  /* Premium button styles */
   button {
     @apply transition-all duration-300 ease-out;
   }
@@ -252,23 +213,19 @@ html{
     @apply transform hover:scale-105;
   }
   
-  /* Premium link styles */
   a {
     @apply transition-colors duration-200;
   }
   
-  /* Card premium styling */
   [role="card"], .card {
     @apply transition-all duration-300 ease-out;
     @apply shadow-md hover:shadow-lg;
   }
   
-  /* Text selection premium color */
   ::selection {
     @apply bg-accent text-accent-foreground;
   }
   
-  /* Scrollbar styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -282,10 +239,6 @@ html{
     background-color: var(--accent);
     border-radius: 9999px;
     transition: background-color 0.2s ease-out;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--accent-hover);
   }
 }
 
@@ -315,14 +268,12 @@ html{
   50% { box-shadow: 0 0 30px rgba(0, 180, 216, 0.4); }
 }
 
-/* Utility classes */
 .fade-in-up { animation: fadeInUp 0.6s ease-out; }
 .fade-in-down { animation: fadeInDown 0.6s ease-out; }
 .slide-in-left { animation: slideInLeft 0.6s ease-out; }
 .slide-in-right { animation: slideInRight 0.6s ease-out; }
 .glow { animation: glow 2s ease-in-out infinite; }
 
-/* Premium gradient text */
 .gradient-text {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -337,28 +288,89 @@ html{
   background-clip: text;
 }
 
-/* Glassmorphism effect */
-.glass {
+/* =======================================================
+   🔥 SKILL SECTION DEDICATED FIXES (সমান সাইজ এবং হোভার গ্লো)
+   ======================================================= */
+
+/* =======================================================
+   🔥 SKILL SECTION DEDICATED FIXES (Tailwind v4 Utility)
+   ======================================================= */
+
+@utility skills-card-main {
+  width: 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  box-shadow: 0 15px 30px -15px rgba(3, 4, 94, 0.1);
+
+  @variant dark {
+    background: rgba(2, 62, 138, 0.4);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    transform: scale(1.06) translateY(-2px);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: #22d3ee;
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.3), 
+                0 20px 35px -15px rgba(14, 165, 233, 0.4), 
+                0 0 25px rgba(34, 211, 238, 0.2);
+
+    @variant dark {
+      background: rgba(2, 62, 138, 0.7);
+      border-color: #22d3ee;
+      box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.4),
+                  0 20px 40px -10px rgba(0, 0, 0, 0.5),
+                  0 0 30px rgba(34, 211, 238, 0.3);
+    }
+  }
 }
 
-.dark .glass {
-  background: rgba(2, 62, 138, 0.7); /* Glassmorphism Deep Ocean */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 165, 211, 0.2);
+@utility skills-fade-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to right, #f7fbff, transparent);
+
+  @variant dark {
+    background: linear-gradient(to right, #0b1120, transparent);
+  }
 }
 
-/* Premium shadow */
-.shadow-premium {
-  box-shadow: 0 20px 25px -5px rgba(3, 4, 94, 0.03), 
-              0 10px 10px -5px rgba(3, 4, 94, 0.01);
+@utility skills-fade-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to left, #f7fbff, transparent);
+
+  @variant dark {
+    background: linear-gradient(to left, #0b1120, transparent);
+  }
 }
 
-.dark .shadow-premium {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 
-              0 10px 10px -5px rgba(0, 0, 0, 0.3);
+@utility skills-subtitle {
+  color: #64748b;
+  @variant dark {
+    color: #94a3b8;
+  }
 }
