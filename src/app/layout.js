@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from "next-themes"
 import "./globals.css"
+import 'boxicons/css/boxicons.min.css';
 
 const inter = Inter({
   subsets: ['latin'], 
