@@ -69,11 +69,15 @@ const About = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="p-5 rounded-2xl glass border border-accent/30 hover:border-accent/60 transition-all hover:shadow-lg backdrop-blur-sm bg-gradient-to-br from-accent/10 to-transparent">
               <h4 className="text-accent text-3xl font-bold">3rd</h4>
-              <p className="text-sm text-text-secondary font-semibold">Year Student</p>
+              <p className="text-sm text-text-secondary font-semibold">
+                Year Student
+              </p>
             </div>
             <div className="p-5 rounded-2xl glass border border-accent/30 hover:border-accent/60 transition-all hover:shadow-lg backdrop-blur-sm bg-gradient-to-br from-accent/10 to-transparent">
               <h4 className="text-accent text-3xl font-bold">5+</h4>
-              <p className="text-sm text-text-secondary font-semibold">Projects Completed</p>
+              <p className="text-sm text-text-secondary font-semibold">
+                Projects Completed
+              </p>
             </div>
           </div>
 
