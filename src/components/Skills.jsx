@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaNodeJs, FaGitAlt } from "react-icons/fa";
 import {
   SiHtml5,
   SiCss,
@@ -8,7 +9,8 @@ import {
   SiTailwindcss,
   SiPython,
   SiCplusplus,
-  SiVim,
+  SiNextdotjs,
+  SiMongodb
 } from "react-icons/si";
 
 const skills = [
@@ -19,10 +21,13 @@ const skills = [
     icon: <SiJavascript className="text-[#F7DF1E] bg-black rounded" />,
   },
   { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white bg-white dark:bg-slate-900 rounded-full p-0.5" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-[#3ccd76]" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-[#00d752]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
   { name: "Python", icon: <SiPython className="text-[#3776AB]" /> },
   { name: "C++", icon: <SiCplusplus className="text-[#00599C]" /> },
-  { name: "Vim", icon: <SiVim className="text-[#019733]" /> },
+  { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
 ];
 
 function Skills() {
@@ -56,7 +61,7 @@ function Skills() {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             ease: "linear",
-            duration: 20,
+            duration: 35,
             repeat: Infinity,
           }}
         >

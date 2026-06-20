@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [showFull, setShowFull] = useState(false);
@@ -91,7 +92,13 @@ const About = () => {
 
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative group w-72 h-72">
-            <div className="relative group w-72 h-72">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="relative group w-72 h-72"
+            >
               <Image
                 className="object-cover rounded-3xl border-2 border-accent glow transition-all duration-300 w-72 h-72"
                 src="/images/About.jpeg"
@@ -100,7 +107,7 @@ const About = () => {
                 height={300}
               />
               <div className="absolute -bottom-4 -right-4 w-72 h-72 border-2 border-accent rounded-3xl opacity-30 -z-0 transition-all duration-500 group-hover:-bottom-2 group-hover:-right-2"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
