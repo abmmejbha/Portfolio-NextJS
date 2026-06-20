@@ -24,6 +24,8 @@ export default function Services() {
     },
   ];
 
+
+
   return (
     <div id="services" className="px-8 py-20 bg-bg-secondary">
       <motion.h2

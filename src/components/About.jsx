@@ -29,7 +29,13 @@ const About = () => {
       </h1>
 
       <div className="flex flex-col md:flex-row-reverse gap-8 items-center ">
-        <div className=" mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8 border-2 border-accent/40 backdrop-blur-md">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8"
+        >
           <span className="inline-block px-4 py-1 rounded-full glass text-accent text-sm font-bold uppercase tracking-wider w-fit">
             About Me
           </span>
@@ -88,27 +94,25 @@ const About = () => {
           >
             {showFull ? "Read Less" : "Read More"}
           </button>
-        </div>
+        </motion.div>
 
         <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative group w-72 h-72">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="relative group w-72 h-72"
-            >
-              <Image
-                className="object-cover rounded-3xl border-2 border-accent glow transition-all duration-300 w-72 h-72"
-                src="/images/About.jpeg"
-                alt="About ABM Mejbha"
-                width={300}
-                height={300}
-              />
-              <div className="absolute -bottom-4 -right-4 w-72 h-72 border-2 border-accent rounded-3xl opacity-30 -z-0 transition-all duration-500 group-hover:-bottom-2 group-hover:-right-2"></div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="relative group w-72 h-72"
+          >
+            <Image
+              className="object-cover rounded-3xl border-2 border-accent glow transition-all duration-300 w-72 h-72"
+              src="/images/About.jpeg"
+              alt="About ABM Mejbha"
+              width={300}
+              height={300}
+            />
+            <div className="absolute -bottom-4 -right-4 w-72 h-72 border-2 border-accent rounded-3xl opacity-30 -z-0 transition-all duration-500 group-hover:-bottom-2 group-hover:-right-2"></div>
+          </motion.div>
         </div>
       </div>
     </div>
