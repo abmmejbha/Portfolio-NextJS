@@ -2,23 +2,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-
 export default function Services() {
+  // এখানে emoji-এর বদলে icon যোগ করা হয়েছে Boxicons ক্লাসের নাম দিয়ে
   const services = [
     {
-      icon: "bx bx-code-alt",
+      icon: "bx bx-code-alt", // Web Development এর জন্য কোড আইকন
       title: "Web Development",
       description:
         "Building responsive and user-friendly websites using modern technologies like React, Next.js, and Node.js.",
     },
     {
-      icon: "bx bx-paint",
+      icon: "bx bxs-paint", // UI/UX এর জন্য পেইন্ট আইকন
       title: "UI/UX Responsive Design",
       description:
         "Designing visually appealing and intuitive user interfaces that enhance user experience and engagement.",
     },
     {
-      emoji: "⚡",
+      icon: "bx bx-bar-chart-alt", // Performance এর জন্য চার্ট আইকন
       title: "Performance Optimization",
       description:
         "Optimizing website performance to ensure fast loading times and smooth user interactions, improving overall user satisfaction.",
@@ -38,7 +38,7 @@ export default function Services() {
   };
 
   const handleMouseLeave = (e) => {
-    e.currentTarget.style.transform =
+     e.currentTarget.style.transform =
       "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
   };
 
@@ -67,13 +67,15 @@ export default function Services() {
             style={{ transition: "transform 0.2s ease-out" }}
             className="flex flex-col gap-3 p-6 border border-border-color rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300"
           >
-            <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-accent/15 border border-accent/30 mb-2">
-              {service.emoji}
+            {/* এখানে ইমোজির জায়গায় <i> ট্যাগ দিয়ে Boxicons বসানো হয়েছে */}
+            <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-3xl bg-accent/15 border border-accent/30 mb-2 text-accent">
+              <i className={service.icon}></i>
             </div>
-            <h3 className="text-xl font-semibold text-text-primary">
+            
+            <h3 className="text-xl font-semibold text-text-primary text-center">
               {service.title}
             </h3>
-            <p className="text-text-primary text-sm leading-relaxed">
+            <p className="text-text-primary text-sm leading-relaxed text-center">
               {service.description}
             </p>
           </motion.div>
