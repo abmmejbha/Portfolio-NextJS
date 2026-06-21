@@ -94,7 +94,7 @@ const ProjectCard = ({ project }) => {
         <p className="text-sm text-text-primary/80 leading-relaxed mb-4 flex-1 font-bold">
           {project.desc}
         </p>
-        <div className="flex flex-wrap gap-2 font-bold mb-6 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+        <div className="flex flex-wrap gap-2 font-bold mb-6 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400">
           {project.tech.map((t) => (
             <span
               key={t}
