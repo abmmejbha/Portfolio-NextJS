@@ -118,7 +118,7 @@ const ServiceCard = ({ service, index }) => {
             </h3>
             
             {/* সার্ভিস ডেসক্রিপশন */}
-            <p className="text-sm leading-relaxed mb-6 text-center text-gray-600 dark:text-gray-300 opacity-90">
+            <p className="text-sm leading-relaxed mb-6 font-bold text-center text-gray-600 dark:text-gray-300 opacity-90">
               {service.description}
             </p>
           </div>

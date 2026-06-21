@@ -54,12 +54,6 @@ const Contact = () => {
       emoji: "📞",
     },
     {
-      label: "location",
-      value: "Dhaka, Bangladesh",
-      href: "https://www.google.com/maps/place/Dhaka,+Bangladesh/@23.810331,90.412521,12z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b0d2f3c7e7:0x9f9f9f9f9f9f9f9f!8m2!3d23.810331!4d90.412521!16zL20vMGNwZQ?entry=ttu",
-      emoji: "📍",
-    },
-    {
       label: "LinkedIn",
       value: "https://www.linkedin.com/in/abm-mejbha/",
       href: "https://www.linkedin.com/in/abm-mejbha-092786202",
@@ -90,7 +84,7 @@ const Contact = () => {
                   href={item.href}
                   target={item.label === "Email" ? "_self" : "_blank"}
                   rel={item.label === "Email" ? undefined : "noreferrer"}
-                  className="flex items-center gap-4 p-5 rounded-2xl glass shadow-premium hover:scale-105 transition-all duration-300"
+                  className="flex items-center gap-4 p-5 rounded-2xl glass ring-1 ring-accent/30 shadow-premium hover:scale-105 transition-all duration-300"
                 >
                   <div className="text-2xl w-12 h-12 flex items-center justify-center rounded-xl bg-accent/15 border border-accent/30">
                     {item.emoji}
