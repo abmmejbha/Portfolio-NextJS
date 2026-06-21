@@ -18,10 +18,10 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass shadow-premium backdrop-blur-sm">
+    <nav className="fixed top-0 w-full z-50 glass shadow-premiu backdrop-blur-sm">
       {/* main navigation bar container */}
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
-        <Link className="text-xl font-bold text-text-primary" href="/">
+        <Link className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent" href="/">
           ABM Mejbha
         </Link>
 

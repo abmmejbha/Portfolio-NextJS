@@ -1,28 +1,27 @@
 "use client";
+import 'boxicons';
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const projects = [
   {
-    icon: "💱",
+    icon: "bx bx-dollar", // Currency Converter এর জন্য আরও সুন্দর ও নিখুঁত আইকন
     title: "Currency Converter",
     desc: "A React app that converts currencies in real-time using live exchange rate APIs.",
     tech: ["React", "API", "JavaScript"],
     live: "",
-    github:
-      "https://github.com/abmmejbha/Learning-React/tree/master/05-2-currecyConverter",
+    github: "https://github.com/abmmejbha/Learning-React/tree/master/05-2-currecyConverter",
   },
   {
-    icon: "🎬",
+    icon: "bx bx-movie-play", // সাধারণ ফিল্মের বদলে মুভি প্লে আইকন (দেখতে দারুণ লাগে)
     title: "Movie Search App",
     desc: "A React app that searches movies in real-time using the OMDB API with poster and rating display.",
     tech: ["React", "API", "JavaScript"],
     live: "",
-    github:
-      "https://github.com/abmmejbha/Learning-React/tree/master/08-movieSearchApp",
+    github: "https://github.com/abmmejbha/Learning-React/tree/master/08-movieSearchApp",
   },
   {
-    icon: "💼",
+    icon: "bx bx-layer", // পোর্টফোলিওর জন্য 'Briefcase' এর চেয়ে 'Layer' বা স্ট্যাক আইকন এখন বেশি ট্রেন্ডি
     title: "Portfolio",
     desc: "My personal portfolio built with Next.js and Tailwind CSS featuring dark mode and smooth animations.",
     tech: ["React", "Next.js", "Tailwind"],
@@ -30,7 +29,7 @@ const projects = [
     github: "https://github.com/abmmejbha/Portfolio-NextJS",
   },
   {
-    icon: "👥",
+    icon: "bx bx-user-voice", // User Management এর জন্য একটু ইউনিক ও মডার্ন আইকন
     title: "User Management System",
     desc: "Full-stack web app for managing users with CRUD operations and MongoDB Atlas persistence.",
     tech: ["React", "Node.js", "MongoDB"],
@@ -38,22 +37,20 @@ const projects = [
     github: "https://github.com/abmmejbha/userManagementApp",
   },
   {
-    icon: "🏥",
+    icon: "bx bxs-first-aid", // Solid ফার্স্ট-এইড বক্স, যা দূর থেকেও পপ করবে
     title: "Hospital Management (C)",
     desc: "Console-based hospital management system in C managing patient and doctor records.",
     tech: ["C", "File Handling"],
     live: "",
-    github:
-      "https://github.com/abmmejbha/Practice-Codes-2024/blob/main/C_Practice/projects/Hospital_management_system.c",
+    github: "https://github.com/abmmejbha/Practice-Codes-2024/blob/main/C_Practice/projects/Hospital_management_system.c",
   },
   {
-    icon: "🐍",
+    icon: "bx bx-game", // স্ন্যেক গেমের জন্য ক্লাসিক গেমপ্যাড আইকন
     title: "Snake Game (C++)",
     desc: "Classic Snake game built in C++ using console graphics with score tracking.",
     tech: ["C++", "OOP", "Console Graphics"],
     live: "",
-    github:
-      "https://github.com/abmmejbha/Practice-Codes-2024/blob/main/CPP_Practice/project/snake.cpp",
+    github: "https://github.com/abmmejbha/Practice-Codes-2024/blob/main/CPP_Practice/project/snake.cpp",
   },
 ];
 
@@ -83,12 +80,12 @@ const ProjectCard = ({ project }) => {
 
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-        className="relative h-full w-full bg-bg-primary  border border-white/10 rounded-[22px] p-6 flex flex-col justify-between overflow-hidden shadow-2xl"
+        className="relative h-full w-full bg-bg-primary  border border-white/10 rounded-[22px] p-6 flex flex-col justify-between overflow-hidden shadow-2xl dark:shadow-cyan-500/20 transition-shadow duration-300 dark:shadow-lg backdrop-blur-lg dark:border-cyan-500/40 dark:border-3"
       >
-        <div className="mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-white/5 border border-white/10">
-          {project.icon}
+        <div className="mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-xl bg-white/5 border border-white/10 *:text-cyan-400">
+          <i className={project.icon}></i>
         </div>
-        <h3 className="text-2xl font-bold text-text-primary mb-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+        <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
           {project.title}
         </h3>
         <p className="text-sm text-text-primary/80 leading-relaxed mb-4 flex-1 font-bold">
