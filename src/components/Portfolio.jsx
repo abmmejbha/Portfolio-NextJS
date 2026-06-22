@@ -1,5 +1,4 @@
 "use client";
-import 'boxicons';
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 

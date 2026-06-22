@@ -1,7 +1,5 @@
 "use client";
-import React from "react";
-import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,28 +14,37 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .send(
-        "service_r14y9km",
-        "template_lhmjdpd",
-        formData,
-        "1KARfkM72yD_jfJU6",
-      )
-      .then(() => {
-        alert("Message sent successfully!");
-        setFormData({
-          from_name: "",
-          from_email: "",
-          phone: "",
-          subject: "",
-          message: "",
+    
+    try {
+      // প্রো-ট্রিক: emailjs শুধুমাত্র ব্রাউজারে বাটন ক্লিকের পর ডাইনামিকালি লোড হবে
+      // এর ফলে সার্ভার বিল্ড টাইমে window এরর আসবে না
+      const emailjs = (await import("@emailjs/browser")).default;
+
+      emailjs
+        .send(
+          "service_r14y9km",
+          "template_lhmjdpd",
+          formData,
+          "1KARfkM72yD_jfJU6"
+        )
+        .then(() => {
+          alert("Message sent successfully!");
+          setFormData({
+            from_name: "",
+            from_email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+        })
+        .catch(() => {
+          alert("Something went wrong. Please try again later.");
         });
-      })
-      .catch(() => {
-        alert("Something went wrong. Please try again later.");
-      });
+    } catch (error) {
+      console.error("Failed to load emailjs", error);
+    }
   };
 
   const contacts = [
@@ -165,7 +172,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Message - full width, outside the 2-column grid */}
               <div className="space-y-2">
                 <label className="text-sm font-bold ml-1 text-text-secondary">
                   Message
@@ -181,7 +187,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Submit button - full width, outside the grid */}
               <button
                 type="submit"
                 className="w-full bg-accent hover:bg-bg-secondary rounded-2xl px-6 py-4 text-white font-bold transition-all hover:scale-[1.02] shadow-premium"
