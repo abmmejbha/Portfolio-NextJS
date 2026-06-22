@@ -36,7 +36,9 @@ const ServiceCard = ({ service, index }) => {
 
   const rotateX = useTransform(mouseY, [-0.5, 0.5], ["20deg", "-20deg"]);
   const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-20deg", "20deg"]);
-  const translateZ = useTransform(mouseX, (value) => value === 0 ? "0px" : "35px");
+  const translateZ = useTransform(mouseX, (value) =>
+    value === 0 ? "0px" : "35px",
+  );
 
   const shineX = useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]);
   const shineY = useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]);
@@ -55,29 +57,31 @@ const ServiceCard = ({ service, index }) => {
   };
 
   return (
-    <div 
-      style={{ perspective: "1200px" }} 
+    <div
+      style={{ perspective: "1200px" }}
       className="w-full h-full relative group"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* glow layer  */}
-      <div 
-        className="hidden md:block absolute -inset-1.5 rounded-[24px] opacity-25 blur-xl pointer-events-none transition-opacity duration-500 group-hover:opacity-75"
+      <div
+        className="absolute -inset-1.5 rounded-[24px] opacity-25 blur-xl pointer-events-none transition-opacity duration-500 group-hover:opacity-75 hidden md:block"
         style={{
-          background: "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
+          background:
+            "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
           backgroundSize: "200% 200%",
-          animation: "premium-flow 4s linear infinite"
+          animation: "premium-flow 4s linear infinite",
         }}
       />
 
       {/* ২. পেছনের রিং বর্ডার লেয়ার */}
-      <div 
-        className="hidden md:block absolute inset-0 rounded-[24px] pointer-events-none"
+      <div
+        className="absolute inset-0 rounded-[24px] pointer-events-none hidden md:block"
         style={{
-          background: "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
+          background:
+            "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
           backgroundSize: "200% 200%",
-          animation: "premium-flow 4s linear infinite"
+          animation: "premium-flow 4s linear infinite",
         }}
       />
 
@@ -87,24 +91,30 @@ const ServiceCard = ({ service, index }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
         viewport={{ once: true }}
-        style={{ 
-          rotateX, 
-          rotateY, 
+        style={{
+          rotateX,
+          rotateY,
           translateZ,
-          transformStyle: "preserve-3d"
+          transformStyle: "preserve-3d",
         }}
         className="absolute top-[2px] left-[2px] right-[2px] bottom-[2px] rounded-[22px] bg-white dark:bg-[#121214] p-6 flex flex-col justify-between cursor-pointer shadow-sm dark:shadow-none overflow-hidden"
       >
         {/* ৪. গ্লাসি শাইন ওভারলে */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 pointer-events-none opacity-30 dark:opacity-25 z-10"
           style={{
-            background: `radial-gradient(400px circle at ${shineX.get()} ${shineY.get()}, rgba(59, 130, 246, 0.2), transparent 50%)`
+            background: `radial-gradient(400px circle at ${shineX.get()} ${shineY.get()}, rgba(59, 130, 246, 0.2), transparent 50%)`,
           }}
         />
 
         {/* কন্টেন্ট লেয়ার */}
-        <div style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }} className="w-full flex flex-col h-full justify-between z-20">
+        <div
+          style={{
+            transform: "translateZ(30px)",
+            transformStyle: "preserve-3d",
+          }}
+          className="w-full flex flex-col h-full justify-between z-20"
+        >
           <div>
             {/* আইকন কন্টেইনার */}
             <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-3xl mb-4 bg-sky-50 text-cyan-500 border border-sky-100/50 dark:bg-slate-700/50 dark:text-cyan-400 dark:border-white/5">
@@ -112,10 +122,10 @@ const ServiceCard = ({ service, index }) => {
             </div>
 
             {/* সার্ভিস টাইটেল */}
-            <h3 className="brand-font text-xl text-cyan-600 font-bold mb-3 text-center  dark:text-white">
+            <h3 className="brand-font text-xl text-cyan-600 font-bold mb-3 text-center dark:text-cyan-300">
               {service.title}
             </h3>
-            
+
             {/* সার্ভিস ডেসক্রিপশন */}
             <p className="text-sm leading-relaxed mb-6 font-bold text-center text-gray-600 dark:text-gray-300 opacity-90">
               {service.description}
@@ -125,8 +135,8 @@ const ServiceCard = ({ service, index }) => {
           {/* হাইলাইটেড টেকনোলজি ট্যাগস */}
           <div className="flex flex-wrap justify-center gap-2 mt-auto">
             {service.tech.map((item) => (
-              <span 
-                key={item} 
+              <span
+                key={item}
                 className="text-[10px] px-2.5 py-0.5 rounded-full font-bold border tracking-wider uppercase bg-sky-50/60 border-sky-100 text-sky-600 dark:bg-cyan-950/40 dark:border-cyan-800 dark:text-cyan-300"
               >
                 {item}
@@ -138,9 +148,15 @@ const ServiceCard = ({ service, index }) => {
 
       <style jsx global>{`
         @keyframes premium-flow {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
       `}</style>
     </div>
@@ -149,13 +165,17 @@ const ServiceCard = ({ service, index }) => {
 
 export default function Services() {
   return (
-    <section id="services" className="px-8 py-20 bg-gray-50 dark:bg-[#09090b] transition-colors duration-300">
+    <section
+      id="services"
+      className="px-8 py-20 bg-gray-50 dark:bg-[#09090b] transition-colors duration-300"
+    >
       <div className="container mx-auto">
         <h2 className="brand-font text-3xl font-bold mb-2 bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-cyan-400 dark:to-blue-500 bg-clip-text text-transparent text-center">
           My Services
         </h2>
         <p className="mb-12 text-sm text-center text-gray-600 dark:text-gray-400">
-          Explore the premium services and specialized stack I use to build seamless digital products.
+          Explore the premium services and specialized stack I use to build
+          seamless digital products.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">

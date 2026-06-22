@@ -75,9 +75,9 @@ const Hero = () => {
         
         {/* ইমেজ সেকশন: মোবাইলে অ্যানিমেশন লোড কমিয়ে md: তে স্পিন ও ফ্লোটিং একটিভ রেখেছি */}
         <div className="w-full md:w-1/2 flex justify-center relative">
-          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-accent/40 md:animate-[spin_25s_linear_infinite] pointer-events-none"></div>
+          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full md:animate-[spin_25s_linear_infinite] pointer-events-none"></div>
           <Image
-            className="glow object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-80 h-80 md:w-[400px] md:h-[400px] border-4 border-white/70 shadow-2xl md:floating"
+            className="glow object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-80 h-80 md:w-[400px] md:h-[400px] shadow-2xl md:floating"
             src="/images/me.PNG"
             alt="ABM Mejbha"
             width={400}
