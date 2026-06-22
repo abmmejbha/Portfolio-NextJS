@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 
@@ -11,7 +11,8 @@ const titles = [
   "Programmer",
 ];
 
-const Hero = () => {
+// টাইপিং ইফেক্টকে আলাদা ছোট কম্পোনেন্ট বানালাম যাতে পুরো হিরো পেজ রি-রেন্ডার না হয়
+const TypingText = memo(() => {
   const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -44,26 +45,38 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [currentTitle, isDeleting, titleIndex]);
 
+  return (
+    <>
+      <span className="text-accent font-extrabold">{currentTitle}</span>
+      <span className="animate-pulse ml-1 text-accent">|</span>
+    </>
+  );
+});
+
+TypingText.displayName = "TypingText";
+
+const Hero = () => {
   const socialLinks = [
-    { icon: <FaFacebookF size={24} />, url: "https://www.facebook.com/suweet.ka" },
-    { icon: <FaGithub size={24} />, url: "https://www.github.com/abmmejbha" },
-    { icon: <FaTwitter size={24} />, url: "https://www.twitter.com/abmmejbha" },
-    { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/abm-mejbha-092786202" },
-    { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/suweet.ka" },
+    { icon: <FaFacebookF size={24} />, url: "https://www.facebook.com/suweet.ka", label: "Facebook" },
+    { icon: <FaGithub size={24} />, url: "https://www.github.com/abmmejbha", label: "Github" },
+    { icon: <FaTwitter size={24} />, url: "https://www.twitter.com/abmmejbha", label: "Twitter" },
+    { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/abm-mejbha-092786202", label: "LinkedIn" },
+    { icon: <FaInstagram size={24} />, url: "https://www.instagram.com/suweet.ka", label: "Instagram" },
   ];
 
   return (
-    <div className="bg-bg-primary min-h-screen relative flex items-center justify-center">
+    <div className="bg-bg-primary min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px]"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px]"></div>
       </div>
 
-      <div className="w-full flex flex-col md:flex-row-reverse justify-between items-center py-24 px-8 md:px-20 max-w-7xl mx-auto gap-16 md:gap-24">
+      <div className="w-full flex flex-col md:flex-row-reverse justify-between items-center py-24 px-8 md:px-20 max-w-7xl mx-auto gap-16 md:gap-24 z-10">
         
+        {/* ইমেজ সেকশন */}
         <div className="w-full md:w-1/2 flex justify-center relative">
-          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-accent/40 animate-[spin_25s_linear_infinite]"></div>
+          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-accent/40 animate-[spin_25s_linear_infinite] pointer-events-none"></div>
           <Image
             className="glow floating object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-80 h-80 md:w-[400px] md:h-[400px] border-4 border-white/70 shadow-2xl"
             src="/images/me.PNG"
@@ -74,6 +87,7 @@ const Hero = () => {
           />
         </div>
 
+        {/* টেক্সট সেকশন */}
         <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left items-center md:items-start">
           <p className="text-2xl text-text-primary font-semibold tracking-wide">
             Hello, It's me
@@ -82,19 +96,19 @@ const Hero = () => {
             ABM MEJBHA
           </h1>
           <p className="text-text-primary text-2xl md:text-3xl font-semibold min-h-[48px]">
-            And I'm a <span className="text-accent font-extrabold">{currentTitle}</span>
-            <span className="animate-pulse ml-1 text-accent">|</span>
+            And I'm a <TypingText />
           </p>
           <p className="text-text-primary text-base md:text-lg leading-relaxed max-w-xl opacity-90">
             Frontend developer skilled in React, Next.js & Node.js. Currently
             studying CSE at BUBT, available for internship.
           </p>
 
-          {/* social icons  */}
+          {/* সোশ্যাল আইকন (aria-label যুক্ত করা হয়েছে) */}
           <div className="flex gap-5 my-2">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
+                aria-label={link.label}
                 className="border-accent text-accent hover:bg-accent w-11 h-11 flex justify-center items-center rounded-full border-2 hover:text-white glow transition-all duration-300 transform hover:-translate-y-1"
                 href={link.url}
                 target="_blank"
