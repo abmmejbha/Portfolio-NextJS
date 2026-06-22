@@ -23,20 +23,20 @@ const About = () => {
   ];
 
   return (
-    <div id="about" className="px-8 py-20 bg-bg-secondary">
+    <div id="about" className="px-8 py-20 bg-bg-secondary overflow-hidden">
       <h1 className="text-center text-3xl font-bold mb-4 bg-cyan-500 bg-clip-text text-transparent">
         About me
       </h1>
 
       <div className="flex flex-col md:flex-row-reverse gap-8 items-center ">
+        {/* টেক্সট সেকশন: md: ফ্লেক্সিবল অ্যানিমেশন (ডেস্কটপে কাজ করবে, মোবাইলে স্ট্যাটিক থাকবে) */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8"
+          className="mt-2 flex w-full md:w-1/2 gap-4 flex-col glass shadow-premium rounded-3xl p-8 transform-none md:transform-gpu"
         >
-
           <h2 className="text-3xl md:text-4xl font-black leading-tight text-text-primary">
             Turning vision Into{" "}
             <span className="gradient-text">Real Projects</span>
@@ -50,15 +50,14 @@ const About = () => {
             {shortText}
           </p>
 
-          {
-            <div
-              className={`overflow-hidden transition-all duration-300 ${showFull ? "max-h-96" : "max-h-0"}`}
-            >
-              <p className="text-sm text-text-primary leading-relaxed">
-                {extraText}
-              </p>
-            </div>
-          }
+          <div
+            className={`overflow-hidden transition-all duration-300 ${showFull ? "max-h-96" : "max-h-0"}`}
+          >
+            <p className="text-sm text-text-primary leading-relaxed">
+              {extraText}
+            </p>
+          </div>
+
           <div className="flex flex-wrap gap-3">
             {techStack.map((tech) => (
               <span
@@ -87,19 +86,20 @@ const About = () => {
 
           <button
             onClick={() => setShowFull(!showFull)}
-            className="bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer font-bold"
+            className="bg-accent hover:bg-accent/80 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer font-bold w-fit"
           >
             {showFull ? "Read Less" : "Read More"}
           </button>
         </motion.div>
 
+        {/* ইমেজ সেকশন */}
         <div className="w-full md:w-1/2 flex justify-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative group w-72 h-72"
+            className="relative group w-72 h-72 transform-none md:transform-gpu"
           >
             <Image
               className="object-cover rounded-3xl border-2 border-accent glow transition-all duration-300 w-72 h-72"
