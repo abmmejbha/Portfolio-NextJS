@@ -1,13 +1,14 @@
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from "next-themes"
-import "./globals.css"
-import 'boxicons/css/boxicons.min.css';
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import "./globals.css";
+import "boxicons/css/boxicons.min.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
-  subsets: ['latin'], 
-  weight: ['300', '400', '600', '700'],
-  variable: '--font-inter', // সিএসএস-এ ব্যবহারের জন্য এই নামটা জরুরি
-})
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-inter", // সিএসএস-এ ব্যবহারের জন্য এই নামটা জরুরি
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -16,8 +17,9 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} font-sans`}>
         <ThemeProvider attribute="class">
           {children}
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

@@ -18,9 +18,9 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass shadow-premiu backdrop-blur-sm">
+    <nav className="fixed top-0 w-full z-50 bg-bg-primary border-b border-border-color shadow-md">
       {/* main navigation bar container */}
-      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-1">
         <Link className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent" href="/">
           ABM Mejbha
         </Link>
@@ -28,31 +28,31 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-4">
           <Link
-            className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors"
+            className="text-sm font-bold text-text-primary hover:text-text-secondary transition-colors shadow-2xl"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors"
+            className="text-sm font-extrabold text-text-primary hover:text-text-secondary transition-colors"
             href="#about"
           >
             About
           </Link>
           <Link
-            className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors"
+            className="text-sm font-bold text-text-primary hover:text-text-secondary transition-colors"
             href="#services"
           >
             Services
           </Link>
           <Link
-            className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors"
+            className="text-sm font-bold text-text-primary hover:text-text-secondary transition-colors"
             href="#portfolio"
           >
             Portfolio
           </Link>
           <Link
-            className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors"
+            className="text-sm font-bold text-text-primary hover:text-text-secondary transition-colors"
             href="#contact"
           >
             Contact
