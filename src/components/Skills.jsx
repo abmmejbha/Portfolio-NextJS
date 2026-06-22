@@ -42,7 +42,7 @@ function Skills() {
 
   return (
     <section id="skills" className="py-20 overflow-hidden relative">
-      {/* গ্লোবাল সিএসএস অ্যানিমেশন ইনজেক্ট করা (টেলউইন্ডের সাথে বেস্ট কম্বিনেশন) */}
+      {/* global CSS for the marquee animation */}
       <style jsx global>{`
         @keyframes marquee {
           0% {
@@ -67,7 +67,7 @@ function Skills() {
       </div>
 
       <div className="relative flex overflow-hidden w-full">
-        {/* ফ্রেমার মোশন বাদ দিয়ে পিওর সিএসএস ক্লাস অ্যাপ্লাই করা হয়েছে */}
+        {/* global CSS for the marquee animation */}
         <div className="flex whitespace-nowrap gap-6 py-4 animate-marquee-infinite will-change-transform">
           {duplicatedSkills.map((skill, index) => (
             <div
