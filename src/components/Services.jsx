@@ -1,24 +1,26 @@
 "use client";
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+// react-icons থেকে হালকা ও আধুনিক আইকন ইমপোর্ট করলাম
+import { BiCodeAlt, BiPaint, BiBarChartAlt } from "react-icons/bi";
 
 const services = [
   {
-    icon: "bx bx-code-alt",
+    icon: <BiCodeAlt />,
     title: "Web Development",
     description:
       "Building responsive, high-performance, and SEO-friendly websites using modern frameworks. Focused on clean architecture and scalable codebases.",
     tech: ["React", "Next.js", "Node.js", "Express.js", "Tailwind"],
   },
   {
-    icon: "bx bxs-paint",
+    icon: <BiPaint />,
     title: "UI/UX Responsive Design",
     description:
       "Designing visually stunning, intuitive, and user-centric interfaces. Crafting responsive layouts that ensure seamless experiences across all device sizes.",
     tech: ["Figma", "Prototyping", "Responsive CSS"],
   },
   {
-    icon: "bx bx-bar-chart-alt",
+    icon: <BiBarChartAlt />,
     title: "Performance Optimization",
     description:
       "Analyzing and fixing bottlenecks to ensure lightning-fast loading times. Improving Core Web Vitals, SEO scores, and overall user retention.",
@@ -41,6 +43,8 @@ const ServiceCard = ({ service, index }) => {
   const shineY = useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]);
 
   const handleMouseMove = (e) => {
+    // turn off 3D effect on touch devices to prevent performance issues and weird behavior
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     const rect = e.currentTarget.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
     y.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -52,15 +56,13 @@ const ServiceCard = ({ service, index }) => {
   };
 
   return (
-    /* লেয়ার ১ ও ২ (স্থির): ৩ডি পারসপেক্টিভ এবং মাউস ট্র্যাকার প্যারেন্ট কন্টেইনার */
     <div 
       style={{ perspective: "1200px" }} 
       className="w-full h-full relative group"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      
-      {/* ১. পেছনের আলাদা অ্যানিমেটেড গ্লো লেয়ার (Cyan-Blue-Indigo) */}
+      {/* ১. পেছনের আলাদা অ্যানিমেটেড গ্লো লেয়ার */}
       <div 
         className="absolute -inset-1.5 rounded-[24px] opacity-25 blur-xl pointer-events-none transition-opacity duration-500 group-hover:opacity-75"
         style={{
@@ -70,8 +72,7 @@ const ServiceCard = ({ service, index }) => {
         }}
       />
 
-      {/* ২. পেছনের আলাদা ২ পিক্সেল থিক অ্যানিমেটেড রিং বর্ডার লেয়ার */}
-      {/* ইনকনসিস্টেন্সি কাটানোর জন্য এটা ওড়াপারের ভেতরের পজিশনে ফিক্সড লক করা */}
+      {/* ২. পেছনের রিং বর্ডার লেয়ার */}
       <div 
         className="absolute inset-0 rounded-[24px] pointer-events-none"
         style={{
@@ -81,8 +82,7 @@ const ServiceCard = ({ service, index }) => {
         }}
       />
 
-      {/* ৩. সামনের মেইন কার্ড - যা ফ্রেমার মোশন দিয়ে ২০ ডিগ্রি টিল্ট হবে */}
-      {/* বর্ডারটি চারদিকে নিখুঁত ২px রাখার জন্য top, left, right, bottom সব ২px এ লকড */}
+      {/* ৩. সামনের মেইন কার্ড */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ const ServiceCard = ({ service, index }) => {
           <div>
             {/* আইকন কন্টেইনার */}
             <div className="mx-auto w-12 h-12 rounded-xl flex items-center justify-center text-3xl mb-4 bg-sky-50 text-cyan-500 border border-sky-100/50 dark:bg-slate-700/50 dark:text-cyan-400 dark:border-white/5">
-              <i className={service.icon}></i>
+              {service.icon}
             </div>
 
             {/* সার্ভিস টাইটেল */}
@@ -137,7 +137,6 @@ const ServiceCard = ({ service, index }) => {
         </div>
       </motion.div>
 
-      {/* সিএসএস গ্লোবাল কীফ্রেম */}
       <style jsx global>{`
         @keyframes premium-flow {
           0% { background-position: 0% 50%; }

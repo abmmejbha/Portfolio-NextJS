@@ -85,7 +85,7 @@ export default function Navbar() {
             Services
           </Link>
           <Link className="text-text-primary hover:text-text-secondary transition-colors" onClick={() => setIsOpen(false)} href="#portfolio">
-            Portfolio
+            Projects
           </Link>
           <Link className="text-text-primary hover:text-text-secondary transition-colors" onClick={() => setIsOpen(false)} href="#contact">
             Contact

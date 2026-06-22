@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+// প্রজেক্টের থিম অনুযায়ী মানানসই react-icons ইমপোর্ট করলাম
+import { BiDollar, BiMoviePlay, BiLayer, BiUserVoice, BiFirstAid, BiGame } from "react-icons/bi";
 
 const projects = [
   {
-    icon: "bx bx-dollar", 
+    icon: <BiDollar />, 
     title: "Currency Converter",
     desc: "A React app that converts currencies in real-time using live exchange rate APIs.",
     tech: ["React", "API", "JavaScript"],
@@ -12,7 +14,7 @@ const projects = [
     github: "https://github.com/abmmejbha/Learning-React/tree/master/05-2-currecyConverter",
   },
   {
-    icon: "bx bx-movie-play", 
+    icon: <BiMoviePlay />, 
     title: "Movie Search App",
     desc: "A React app that searches movies in real-time using the OMDB API with poster and rating display.",
     tech: ["React", "API", "JavaScript"],
@@ -20,7 +22,7 @@ const projects = [
     github: "https://github.com/abmmejbha/Learning-React/tree/master/08-movieSearchApp",
   },
   {
-    icon: "bx bx-layer",  
+    icon: <BiLayer />,  
     title: "Portfolio",
     desc: "My personal portfolio built with Next.js and Tailwind CSS featuring dark mode and smooth animations.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -28,7 +30,7 @@ const projects = [
     github: "https://github.com/abmmejbha/portfolio",
   },
   {
-    icon: "bx bx-user-voice", 
+    icon: <BiUserVoice />, 
     title: "User Management System",
     desc: "Full-stack web app for managing users with CRUD operations and MongoDB Atlas persistence.",
     tech: ["React", "Node.js", "MongoDB"],
@@ -36,7 +38,7 @@ const projects = [
     github: "https://github.com/abmmejbha/userManagementApp",
   },
   {
-    icon: "bx bxs-first-aid", 
+    icon: <BiFirstAid />, 
     title: "Hospital Management (C)",
     desc: "Console-based hospital management system in C managing patient and doctor records.",
     tech: ["C", "File Handling"],
@@ -44,7 +46,7 @@ const projects = [
     github: "https://github.com/abmmejbha/Practice-Codes-2024/blob/main/C_Practice/projects/Hospital_management_system.c",
   },
   {
-    icon: "bx bx-game", 
+    icon: <BiGame />, 
     title: "Snake Game (C++)",
     desc: "Classic Snake game built in C++ using console graphics with score tracking.",
     tech: ["C++", "OOP", "Console Graphics"],
@@ -65,6 +67,7 @@ const ProjectCard = ({ project }) => {
     <div
       className="relative h-[320px] w-full [perspective:1000px] group"
       onMouseMove={(e) => {
+        if (window.matchMedia("(pointer: coarse)").matches) return;
         const rect = e.currentTarget.getBoundingClientRect();
         x.set((e.clientX - rect.left) / rect.width - 0.5);
         y.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -79,10 +82,10 @@ const ProjectCard = ({ project }) => {
 
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-        className="relative h-full w-full bg-bg-primary  border border-white/10 rounded-[22px] p-6 flex flex-col justify-between overflow-hidden shadow-2xl dark:shadow-cyan-500/20 transition-shadow duration-300 dark:shadow-lg backdrop-blur-lg dark:border-cyan-500/40 dark:border-3"
+        className="relative h-full w-full bg-bg-primary border border-white/10 rounded-[22px] p-6 flex flex-col justify-between overflow-hidden shadow-2xl dark:shadow-cyan-500/20 transition-shadow duration-300 dark:shadow-lg backdrop-blur-lg dark:border-cyan-500/40 dark:border-3"
       >
-        <div className="mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-4xl bg-white/5 border border-white/10 *:text-cyan-400">
-          <i className={project.icon}></i>
+        <div className="mb-4 w-12 h-12 rounded-xl flex items-center justify-center text-4xl bg-white/5 border border-white/10 text-cyan-400">
+          {project.icon}
         </div>
         <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
           {project.title}
@@ -91,11 +94,12 @@ const ProjectCard = ({ project }) => {
           {project.desc}
         </p>
         <div className="flex flex-wrap gap-2 font-bold mb-6 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400">
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="text-[10px] px-2 py-1 rounded-full border border-accent/20 uppercase tracking-wider"
-            >
+          {projects.map(() => {}).tech?.map((t) => ( // fallback avoiding crashes
+            <span key={t} className="text-[10px] px-2 py-1 rounded-full border border-accent/20 uppercase tracking-wider">
+              {t}
+            </span>
+          )) || project.tech.map((t) => (
+            <span key={t} className="text-[10px] px-2 py-1 rounded-full border border-accent/20 uppercase tracking-wider">
               {t}
             </span>
           ))}
@@ -104,6 +108,9 @@ const ProjectCard = ({ project }) => {
           {project.live && (
             <a
               href={project.live}
+              aria-label={`Live demo of ${project.title}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 bg-accent text-white rounded-lg text-sm font-semibold hover:opacity-90"
             >
               Live Demo
@@ -111,6 +118,7 @@ const ProjectCard = ({ project }) => {
           )}
           <a
             href={project.github}
+            aria-label={`Github repository of ${project.title}`}
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 border border-white/10 text-text-primary rounded-lg text-sm font-semibold hover:border-accent hover:text-accent"
