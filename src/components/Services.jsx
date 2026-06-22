@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-// react-icons থেকে হালকা ও আধুনিক আইকন ইমপোর্ট করলাম
 import { BiCodeAlt, BiPaint, BiBarChartAlt } from "react-icons/bi";
 
 const services = [
@@ -62,9 +61,9 @@ const ServiceCard = ({ service, index }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* ১. পেছনের আলাদা অ্যানিমেটেড গ্লো লেয়ার */}
+      {/* glow layer  */}
       <div 
-        className="absolute -inset-1.5 rounded-[24px] opacity-25 blur-xl pointer-events-none transition-opacity duration-500 group-hover:opacity-75"
+        className="hidden md:block absolute -inset-1.5 rounded-[24px] opacity-25 blur-xl pointer-events-none transition-opacity duration-500 group-hover:opacity-75"
         style={{
           background: "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
           backgroundSize: "200% 200%",
@@ -74,7 +73,7 @@ const ServiceCard = ({ service, index }) => {
 
       {/* ২. পেছনের রিং বর্ডার লেয়ার */}
       <div 
-        className="absolute inset-0 rounded-[24px] pointer-events-none"
+        className="hidden md:block absolute inset-0 rounded-[24px] pointer-events-none"
         style={{
           background: "linear-gradient(135deg, #06b6d4, #3b82f6, #4f46e5, #06b6d4)",
           backgroundSize: "200% 200%",
@@ -113,7 +112,7 @@ const ServiceCard = ({ service, index }) => {
             </div>
 
             {/* সার্ভিস টাইটেল */}
-            <h3 className="brand-font text-xl font-bold mb-3 text-center text-gray-900 dark:text-white">
+            <h3 className="brand-font text-xl text-cyan-600 font-bold mb-3 text-center  dark:text-white">
               {service.title}
             </h3>
             
