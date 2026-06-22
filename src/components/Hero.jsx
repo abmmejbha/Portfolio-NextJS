@@ -11,7 +11,6 @@ const titles = [
   "Programmer",
 ];
 
-// টাইপিং ইফেক্টকে আলাদা ছোট কম্পোনেন্ট বানালাম যাতে পুরো হিরো পেজ রি-রেন্ডার না হয়
 const TypingText = memo(() => {
   const [currentTitle, setCurrentTitle] = useState("");
   const [titleIndex, setTitleIndex] = useState(0);
@@ -66,19 +65,19 @@ const Hero = () => {
 
   return (
     <div className="bg-bg-primary min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */}
+      {/* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট: মোবাইলের জন্য জিপিইউ ট্রিক যোগ করেছি (will-change) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px]"></div>
-        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px]"></div>
+        <div className="absolute -top-24 -left-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px] will-change-transform"></div>
+        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/30 rounded-full blur-[120px] will-change-transform"></div>
       </div>
 
       <div className="w-full flex flex-col md:flex-row-reverse justify-between items-center py-24 px-8 md:px-20 max-w-7xl mx-auto gap-16 md:gap-24 z-10">
         
-        {/* ইমেজ সেকশন */}
+        {/* ইমেজ সেকশন: মোবাইলে অ্যানিমেশন লোড কমিয়ে md: তে স্পিন ও ফ্লোটিং একটিভ রেখেছি */}
         <div className="w-full md:w-1/2 flex justify-center relative">
-          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-accent/40 animate-[spin_25s_linear_infinite] pointer-events-none"></div>
+          <div className="absolute w-80 h-80 md:w-[420px] md:h-[420px] rounded-full border-2 border-dashed border-accent/40 md:animate-[spin_25s_linear_infinite] pointer-events-none"></div>
           <Image
-            className="glow floating object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-80 h-80 md:w-[400px] md:h-[400px] border-4 border-white/70 shadow-2xl"
+            className="glow object-cover object-top rounded-2xl hover:scale-105 transition-all duration-300 w-80 h-80 md:w-[400px] md:h-[400px] border-4 border-white/70 shadow-2xl md:floating"
             src="/images/me.PNG"
             alt="ABM Mejbha"
             width={400}
@@ -103,7 +102,7 @@ const Hero = () => {
             studying CSE at BUBT, available for internship.
           </p>
 
-          {/* সোশ্যাল আইকন (aria-label যুক্ত করা হয়েছে) */}
+          {/* সোশ্যাল আইকন */}
           <div className="flex gap-5 my-2">
             {socialLinks.map((link, index) => (
               <a
