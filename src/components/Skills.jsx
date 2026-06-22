@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { FaNodeJs, FaGitAlt } from "react-icons/fa";
 import {
   SiHtml5,
@@ -10,7 +9,7 @@ import {
   SiPython,
   SiCplusplus,
   SiNextdotjs,
-  SiMongodb
+  SiMongodb,
 } from "react-icons/si";
 
 const skills = [
@@ -21,7 +20,12 @@ const skills = [
     icon: <SiJavascript className="text-[#F7DF1E] bg-black rounded" />,
   },
   { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white bg-white dark:bg-slate-900 rounded-full p-0.5" /> },
+  {
+    name: "Next.js",
+    icon: (
+      <SiNextdotjs className="text-black dark:text-white bg-white dark:bg-slate-900 rounded-full p-0.5" />
+    ),
+  },
   { name: "Node.js", icon: <FaNodeJs className="text-[#3ccd76]" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-[#00d752]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
@@ -31,44 +35,44 @@ const skills = [
 ];
 
 function Skills() {
-  const duplicatedSkills = [...skills, ...skills];
+  // duplicating the skills array multiple times to create a longer
+  // marquee effect without needing to loop infinitely in React
+  // (which can cause performance issues)
+  const duplicatedSkills = [...skills, ...skills, ...skills, ...skills];
 
   return (
     <section id="skills" className="py-20 overflow-hidden relative">
+      {/* গ্লোবাল সিএসএস অ্যানিমেশন ইনজেক্ট করা (টেলউইন্ডের সাথে বেস্ট কম্বিনেশন) */}
+      <style jsx global>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee-infinite {
+          animation: marquee 45s linear infinite;
+        }
+      `}</style>
+
       <div className="container mx-auto px-6 mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-center"
-        >
+        <h2 className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-center">
           Tech Stack
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-sm text-center mt-4 skills-subtitle"
-        >
+        </h2>
+        <p className="text-sm text-text-secondary text-center mt-4 skills-subtitle">
           Here are the technologies I work with:
-        </motion.p>
+        </p>
       </div>
 
-      <div className="relative flex overflow-hidden">
-        <motion.div
-          className="flex whitespace-nowrap gap-6 py-4"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            ease: "linear",
-            duration: 35,
-            repeat: Infinity,
-          }}
-        >
+      <div className="relative flex overflow-hidden w-full">
+        {/* ফ্রেমার মোশন বাদ দিয়ে পিওর সিএসএস ক্লাস অ্যাপ্লাই করা হয়েছে */}
+        <div className="flex whitespace-nowrap gap-6 py-4 animate-marquee-infinite will-change-transform">
           {duplicatedSkills.map((skill, index) => (
             <div
               key={index}
-              className="text-text-primary font-bold skills-card-main shrink-0"
+              className="text-text-primary font-bold skills-card-main shrink-0 flex items-center gap-3"
             >
               <span className="text-4xl flex items-center justify-center shrink-0">
                 {skill.icon}
@@ -78,9 +82,9 @@ function Skills() {
               </span>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* সাইডের শ্যাডো - এখন গ্লোবাল সিএসএস থেকে জেনারেট হবে */}
+        {/* side fades */}
         <div className="skills-fade-left"></div>
         <div className="skills-fade-right"></div>
       </div>
